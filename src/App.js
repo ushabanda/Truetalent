@@ -1,9 +1,11 @@
 import React from 'react'
+import Essential from './Essential'
 
 function App() {
   return (
     <div>
-      <h1>Hello World</h1>
+      
+      <Essential />
     </div>
   )
 }

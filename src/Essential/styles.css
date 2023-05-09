@@ -1,0 +1,78 @@
+h2{
+    font-family:sans-serif;
+    font-size:40px;
+    font-weight:600;
+    text-align: center;
+    
+}
+.text{
+    color:#4cc29b;
+}
+p{
+    text-align: center;
+    color:grey;
+    margin-top: -20px;
+    font-size: 18px;
+    
+}
+#button{
+    margin-left: 300px;
+}
+.jobs{
+    padding:15px;
+    margin:2px;
+    border:1px solid grey;
+    background-color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.search-container{
+    margin-left: 300px;
+}
+.candidates{
+    padding:20px;
+    border:1px solid rgb(235, 229, 229);
+}
+.search{
+    padding:8px;
+    color:ghostwhite;
+    background-color: #4cc29b;
+    width:125px;
+    border-radius: 8px;
+    border:1px solid #4cc29b;
+    margin-left: -135px;
+    height:40px;
+    margin-top:8px;
+}
+#candidates-one{
+    width:310px;
+    border-right: 1px solid grey;
+}
+#candidates-two{
+    width:410px;
+}
+SearchIcon{
+    margin:0 10px;
+}
+.search-container{
+    display: flex;
+    background-color: white;
+    width: 770px;
+    border:1px solid rgb(247, 239, 239);
+    border-radius: 5px;
+}
+/* .search-box1{
+    border:none;
+}
+.search-box2{
+    border: none;
+}
+.search-box1, search-box2:focus{
+    outline: none;
+} */
+.candidates{
+    border:none;
+}
+.candidates:focus{
+    border:none;
+}
