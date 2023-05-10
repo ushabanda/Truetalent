@@ -1,66 +1,83 @@
-h2{
-    font-family:sans-serif;
-    font-size:40px;
-    font-weight:600;
+h2 {
+    font-family: sans-serif;
+    font-size: 40px;
+    font-weight: 600;
     text-align: center;
-    
+
 }
-.text{
-    color:#4cc29b;
+
+.text {
+
+    color: #14BC9A;
 }
-p{
+
+p {
     text-align: center;
-    color:grey;
+    color: grey;
     margin-top: -20px;
     font-size: 18px;
-    
+
 }
-#button{
+
+#button {
     margin-left: 300px;
 }
-.jobs{
-    padding:15px;
-    margin:2px;
-    border:1px solid grey;
+
+.jobs {
+    padding: 15px;
+    margin: 2px;
+    border: 1px solid grey;
     background-color: white;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
-.search-container{
+
+.search-container {
     margin-left: 300px;
 }
-.candidates{
-    padding:20px;
-    border:1px solid rgb(235, 229, 229);
+
+.candidates {
+    padding: 20px;
+    border: 1px solid rgb(235, 229, 229);
 }
-.search{
-    padding:8px;
-    color:ghostwhite;
-    background-color: #4cc29b;
-    width:125px;
+
+.search {
+    padding: 8px;
+    color: ghostwhite;
+    background-color: #14BC9A;
+    width: 100px;
     border-radius: 8px;
-    border:1px solid #4cc29b;
-    margin-left: -135px;
-    height:40px;
-    margin-top:8px;
+    border: 1px solid #14BC9A;
+    margin-left: -115px;
+    height: 40px;
+    margin-top: 8px;
+    text-align: right;
 }
-#candidates-one{
-    width:310px;
+
+#candidates-one {
+    width: 310px;
     border-right: 1px solid grey;
 }
-#candidates-two{
-    width:410px;
+
+#candidates-two {
+    width: 410px;
 }
-SearchIcon{
-    margin:0 10px;
+
+SearchIcon {
+    margin: 0 10px;
+    
 }
-.search-container{
+
+.search-container {
     display: flex;
     background-color: white;
-    width: 770px;
-    border:1px solid rgb(247, 239, 239);
-    border-radius: 5px;
+    width: 800px;
+    /* border: 1px solid rgb(247, 239, 239); */
+    border-radius: 10px;
+    box-shadow: 0 0 3px 3px rgb(248, 248, 248);
+    border-radius: none;
 }
+
 /* .search-box1{
     border:none;
 }
@@ -70,9 +87,17 @@ SearchIcon{
 .search-box1, search-box2:focus{
     outline: none;
 } */
-.candidates{
-    border:none;
+.candidates {
+    border: none;
 }
-.candidates:focus{
-    border:none;
+
+.candidates:focus {
+    border: none;
+}
+
+.search-icon2 {
+    position: relative;
+    top: 7px;
+    color: white;
+    right: 85px;
 }
