@@ -5,7 +5,7 @@ import 'react-input-range/lib/css/index.css';
 import "./styles.css"
 
 function Rangeslider() {
-    const [value, setValue] = useState({ min: 0, max: 100 });
+    const [value, setValue] = useState({ min: 0, max: 20 });
     const handleRangeChange = (value) => {
         setValue(value);
       };
@@ -17,12 +17,9 @@ function Rangeslider() {
   minValue={0}
   value={value}
   onChange={handleRangeChange}
-  // formatLabel={(value, type) => {
-  //   if (type === 'min' || type === 'max') {
-  //     return <span className="input-range__label--value">{value}</span>;
-  //   }
-  // }}
 />
+<p className='range'>{value.min}years</p>
+<p className='rangeOne'>{value.max}+years</p>
     </div>
   )
 }
