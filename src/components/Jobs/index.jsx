@@ -2,7 +2,9 @@ import React from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import "./styles.css";
-import ProgressBar from "@ramonak/react-progress-bar";
+import Rangeslider from "../Rangeslider";
+// import RangeSlider from 'react-range-slider-input';
+// import 'react-range-slider-input/dist/style.css';
 
 function Jobs() {
   return (
@@ -221,10 +223,9 @@ function Jobs() {
             <p>+13 More</p>
             <div>
               <p>Experiance</p>
-              <div className="progress">
-              <input type="range" min="0" max="20" value="0" className="progressbarOne"/>
-               {/* <input type="range" min="0" max="20" value="20" className="progressbarTwo"/> */}
-              </div>
+              
+              <Rangeslider />
+               
               <div className="years">
                <div className="yearOne">0 years</div>
               <div className="yearTwenty">20+ years</div>
@@ -253,6 +254,7 @@ function Jobs() {
                 <input type="date" className="calender date" />
               </div>
             </div>
+            
           </form>
         </div>
       </div>
