@@ -91,8 +91,8 @@ p{
 .toggle-one{
     position:relative;
     display:block;
-    height:25px;
-    width:65px;
+    height:20px;
+    width:50px;
     background-color:rgb(184, 176, 176);
     border-radius:20px;
     cursor: pointer;
@@ -101,8 +101,8 @@ p{
 .toggle-thr {
     position:relative;
     display:block;
-    height:25px;
-    width:65px;
+    height:20px;
+    width:50px;
     background-color:rgb(184, 176, 176);
     border-radius:20px;
     cursor: pointer;
@@ -141,10 +141,10 @@ background-color: #14BC9A;
     background-color: #14BC9A;
 }
 .toggle:checked + .toggle-one:before{
-    left:42px;
+    left:27px;
 }
 .toggle-two:checked + .toggle-thr:before{
-    left:42px;
+    left:27px;
 }
 .toggle-container{
     display:flex;
