@@ -3,6 +3,8 @@ import "./styles.css";
 import SearchIcon from "@mui/icons-material/Search";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { useNavigate } from "react-router-dom";
+import images from "../components/images/usha-image.jpg"
+
 
 function Essential() {
   const [jobs, setJobs] = useState(false);
@@ -29,6 +31,9 @@ function Essential() {
         Get the <span className="text">Right Job</span> You Deserve
       </h2>
       <p>Your next career move starts here</p>
+      <div className="image-container">
+      <img src={images} alt="usha-image.jpg" />
+      </div>
       <button
         className="jobs"
         id="button"

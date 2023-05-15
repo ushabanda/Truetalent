@@ -1,12 +1,47 @@
-import React from "react";
+import React,{useState} from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import "./styles.css";
 import Rangeslider from "../Rangeslider";
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 // import RangeSlider from 'react-range-slider-input';
 // import 'react-range-slider-input/dist/style.css';
+import Calendar from "../calendar";
 
 function Jobs() {
+//   const [todate, setTodate] = useState([])
+//   const [fromdate, setFromdate] = useState([])
+//   const[todateformat, setTodateformat] = useState('')
+//   const[fromdateformat, setFromdateformat] = useState('')
+
+//   const handletodate=(e)=> {
+// const gettodatevalue = e.target.value;
+// const setdateformat = gettodatevalue.split('-')
+// const settoyear = setdateformat[0];
+// const settomonth = setdateformat[1];
+// const settodate = setdateformat[2];
+// const settodateformat = settoyear+""+settomonth+""+settodate;
+// setTodate(gettodatevalue)
+// setTodateformat(settodateformat)
+
+// console.log(settodateformat);
+//   }
+// const handlefromdate=(e)=> {
+//   const getfromdatevalue = e.target.value;
+//   const setfromformat = getfromdatevalue.split('-')
+//   const setfromyear = setfromformat[0];
+//   const setfrommonth = setfromformat[1];
+//   const setfromdate = setfromformat[2];
+//   const setfromformatdate = setfromyear+""+setfrommonth+""+setfromdate;
+//   setFromdate(getfromdatevalue)
+//   setFromdateformat(setfromformatdate)
+  
+  
+//     }
+//     events={
+//       backgroundColor:blue
+//     }
+
   return (
     <div className="root-container">
       <div className="main-container">
@@ -36,7 +71,7 @@ function Jobs() {
         </div>
 
         <div className="form-container">
-          <form>
+          <form >
             <p>Location</p>
             <div>
               <input type="search" placeholder="City" className="city" />
@@ -226,10 +261,7 @@ function Jobs() {
               
               <Rangeslider />
                
-              <div className="years">
-               <div className="yearOne">0 years</div>
-              <div className="yearTwenty">20+ years</div>
-              </div>
+              
             </div>
             <div className="toggle-container">
               <p className="travel">Travel Required</p>
@@ -247,12 +279,23 @@ function Jobs() {
             </div>
             <div>
               <p>Jobs Posted Between</p>
-              <div>
-                <input type="date" className="calender month"/>
+              {/* <div>
+                <span>
+                <CalendarMonthIcon />
+                </span>
+                <div>
+                <input type="date" className="calender month" name="todate" placeholder="dd-mm-yyyy" onChange={(e)=>handletodate(e)} />
+                </div>
               </div>
               <div>
-                <input type="date" className="calender date" />
-              </div>
+                <span>
+                <CalendarMonthIcon />
+                </span>
+                <div>
+                <input type="date" className="calender month" name="fromdate" placeholder="dd-mm-yyyy" onChange={(e)=>handlefromdate(e)}/>
+                </div>
+              </div> */}
+              <Calendar />
             </div>
             
           </form>
