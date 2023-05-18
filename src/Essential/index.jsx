@@ -4,7 +4,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { useNavigate } from "react-router-dom";
 import images from "../components/images/usha-image.jpg"
-
+import Tablecomponent from "../components/Tablecomponent/Tablecomponent";
 
 function Essential() {
   const [jobs, setJobs] = useState(false);
@@ -83,6 +83,7 @@ function Essential() {
           </button>
         </div>
       </div>
+      <Tablecomponent />
     </div>
   );
 }

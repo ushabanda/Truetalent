@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import InputRange from 'react-input-range';
 import 'react-input-range/lib/css/index.css';
-import "./styles.css"
+import "./rangeslider-styles.css"
 
 function Rangeslider() {
     const [value, setValue] = useState({ min: 0, max: 20 });

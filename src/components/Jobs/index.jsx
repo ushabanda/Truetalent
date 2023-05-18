@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
-import "./styles.css";
+import "./job-card-styles.css";
 import Rangeslider from "../Rangeslider";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
-import Calendar from "../calendar";
+import Calendar from "../calendar/calender";
 import CardList from "../cards/CardList";
 import { Box } from "@mui/system";
+import ViewListIcon from '@mui/icons-material/ViewList';
+import ViewDayIcon from '@mui/icons-material/ViewDay';
+import Tablecomponent from "../Tablecomponent/Tablecomponent";
+
 function Jobs() {
   const [formData, setFormData] = useState({});
 
@@ -480,8 +484,27 @@ function Jobs() {
             </form>
           </div>
         </div>
-        <div className="job-card-container">
-          <CardList />
+        <div className="search-result">
+          <h3 className="search-content">Search Result</h3>
+          <div className="sort-content">
+            <p className="sortparagraph">Sort by:</p>
+            <div className="select-content">
+            <select className="select">
+              <option>Newest First</option>
+              <option>Oldest First</option>
+              <option>Most Relevent</option>
+            </select>
+            <div className="icon-content">
+            {/* <ViewListIcon /> */}
+            <div>
+            <Tablecomponent />
+            </div>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div >
+          {/* <CardList /> */}
         </div>
       </div>
     </div>

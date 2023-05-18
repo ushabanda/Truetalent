@@ -1,0 +1,24 @@
+.gridicon{
+    margin-left:50px;
+    margin-bottom:80px;
+    position: relative;
+    top:-26px;
+    left:-10px;
+}
+.listicon{
+    margin-top:100px;
+    margin-left:5px;
+}
+.card-contents {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top:50px;
+}
+.job-card-container {
+    padding: 10px;
+    height: -webkit-fill-available;
+    height: -moz-available;
+    width: 800px;
+    margin-top: -70px;
+    margin-left: -760px;
+}

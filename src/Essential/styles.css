@@ -11,13 +11,13 @@ h2 {
     color: #14BC9A;
 }
 
-p {
+/* p {
     text-align: center;
     color: grey;
     margin-top: -20px;
     font-size: 18px;
 
-}
+} */
 
 #button {
     margin-left: 300px;
@@ -101,11 +101,9 @@ SearchIcon {
     color: white;
     right: 85px;
 }
-img{
+/* img{
     height:250px;
     width:250px;
-    margin-left:1100px;
-    margin-top:-120px;
     border-radius: 50%;
     border:1px solid black;
-}
+} */
