@@ -13,7 +13,7 @@
     box-shadow: 0 3px 15px rgba(49,65,88,.12156862745098039);
 }
 img{
-    width:130px;
+    width:120px;
 }
 h5,p{
     margin-left:5px;
@@ -23,4 +23,7 @@ p{
 }
 .job-card:hover{
     border:1px solid #14BC9A;
+}
+.GenInvo{
+    width:100px;
 }

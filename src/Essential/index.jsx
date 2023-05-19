@@ -5,6 +5,7 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { useNavigate } from "react-router-dom";
 import images from "../components/images/usha-image.jpg"
 import Tablecomponent from "../components/Tablecomponent/Tablecomponent";
+import LogoBox from "../components/LogoBox/LogoBox";
 
 function Essential() {
   const [jobs, setJobs] = useState(false);
@@ -30,10 +31,11 @@ function Essential() {
       <h2>
         Get the <span className="text">Right Job</span> You Deserve
       </h2>
-      <p>Your next career move starts here</p>
-      <div className="image-container">
-      <img src={images} alt="usha-image.jpg" />
+      <p className="mainpara">Your next career move starts here</p>
+      <div className="photoplace">
+      <img src={images} alt="usha-image.jpg" className="photo-container"/>
       </div>
+      <div className="mainpage-searchbox">
       <button
         className="jobs"
         id="button"
@@ -81,9 +83,12 @@ function Essential() {
           <button className="search" onClick={navigateJobs}>
             Search
           </button>
+          </div>
         </div>
       </div>
-      <Tablecomponent />
+      <div>
+        <LogoBox />
+      </div>
     </div>
   );
 }

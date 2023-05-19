@@ -6,7 +6,7 @@ import "./styles.css"
 import Table from './Table';
 
 function Tablecomponent() {
-  const [showBoxes, setShowBoxes] = useState(false);
+  const [showBoxes, setShowBoxes] = useState(true);
   const [displayText, setDisplayText] = useState(false);
 
   const handleFirstButtonClick = () => {
