@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import images from "../components/images/usha-image.jpg"
 import Tablecomponent from "../components/Tablecomponent/Tablecomponent";
 import LogoBox from "../components/LogoBox/LogoBox";
+import Navbar from "../components/Navbar/Navbar";
 
 function Essential() {
   const [jobs, setJobs] = useState(false);
@@ -28,6 +29,7 @@ function Essential() {
   };
   return (
     <div>
+      <Navbar />
       <h2>
         Get the <span className="text">Right Job</span> You Deserve
       </h2>
