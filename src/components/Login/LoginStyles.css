@@ -1,0 +1,118 @@
+.login-root,
+.login-page-container,
+.login-image-container {
+    width: inherit;
+    height: inherit;
+}
+
+.login-image-container {
+    display: flex;
+}
+
+.login-banner-image {
+    height: inherit;
+    width: 82%;
+}
+
+.img-data {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height:fit-content;
+    margin-top:15%;
+    width:65%;
+}
+
+.login-image-content,
+.login-form {
+    width: 50%;
+}
+
+.login-form {
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    margin-top: 2%;
+}
+.image-label{
+    margin-top:20px;
+}
+.login-image-para{
+    border:1px solid #14BC9A;
+    height:5%;
+    width:70%;
+    padding:3px;
+    border-radius: 5px;
+    
+}
+.login-image-para .login-image-learn{
+    text-align: center;
+    color:#14BC9A;
+font-size: 600;
+
+}
+.login-email-input{
+    padding:17px;
+    width:45%;
+    background-color: #F7F7F7;
+    border:0px;
+    border-radius:5px;
+    font-size: 500;
+    font-weight: bold;
+    
+}
+.login-password-input{
+    padding:17px;
+    width:48%;
+    background-color: #F7F7F7;
+    border:0px;
+    border-radius:5px;
+    font-size: 500;
+    font-weight: bold;
+}
+.login-remember{
+    font-size: .875em;
+}
+.login-link-remember{
+    font-size: .875em;
+    margin-left: 18%;
+    text-decoration: none;
+}
+.login-password-box{
+    /* padding:5px; */
+    margin:30px;
+    font-size: 500;
+    font-weight: bold;
+    margin-left: -3px;
+}
+.login-sign-container{
+    padding:10px;
+    width:50%;
+    margin:5% 0 3% -2px;
+    border:none;
+    background-color: #14BC9A;
+    padding:15px;
+    border-radius:5px;
+    color:white;
+}
+.login-google-account{
+border:1px solid #DCDCDC;
+text-decoration:none;
+color:black;
+padding:10px;
+position: relative;
+/* top:2px; */
+display:block;
+width:46%;
+left:-10px;
+border-radius:5px;
+text-align: center;
+font-size: 12px;
+font-weight: 500;
+}
+.login-job-seeker{
+    margin-top:20px;
+    margin-left:17%;
+    color:#212529;
+    font-size: .810em;
+}

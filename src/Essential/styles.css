@@ -65,7 +65,7 @@ h2 {
 
 SearchIcon {
     margin: 0 10px;
-    
+
 }
 
 .search-container {
@@ -101,24 +101,32 @@ SearchIcon {
     color: white;
     right: 85px;
 }
-.photo-container{
-    height:200px;
-    width:200px;
-    border-radius:50%;
-    position:relative;
-    left:1140px;
-    top:-120px;
-    
+
+.photo-container {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    position: relative;
+    left: 1140px;
+    top: -120px;
+
 }
-.mainpage-searchbox{
-    margin-top:-300px;
+
+.mainpage-searchbox {
+    margin-top: -300px;
 }
-.photoplace{
-    height:300px;
+
+.photoplace {
+    height: 300px;
 }
-.mainpara{
+
+.mainpara {
     text-align: center;
-    color:#9398A1;
+    color: #9398A1;
     font-size: .975em;
-    margin-top:-20px;
+    margin-top: -20px;
+}
+
+.main-root {
+    height: inherit;
 }
