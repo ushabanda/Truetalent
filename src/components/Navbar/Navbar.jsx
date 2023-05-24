@@ -8,6 +8,9 @@ function Navbar() {
   let navigateLogin = () => {
     navigate("/login");
   };
+  let navigateRegister = () => {
+    navigate("/register");
+  };
   return (
     <div className='Navbar-container'>
       <div className='truetalent-logo'>
@@ -21,7 +24,7 @@ function Navbar() {
         </div>
         <div>
           <button type="button" className='navbar-login' onClick={navigateLogin}>Login</button>
-          <button type="button" className='navbar-register'><Link to="/register" className='link-register'>Register</Link></button>
+          <button type="button" className='navbar-register' onClick={navigateRegister}>Register</button>
         </div>
     </div>
   )

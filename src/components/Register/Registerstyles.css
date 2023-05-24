@@ -1,0 +1,50 @@
+.register-root,
+.register-page-container,
+.register-image-container {
+    width: inherit;
+    height: inherit;
+}
+
+.register-image-container {
+    display: flex;
+}
+.register-image-content,
+.register-form {
+    width: 50%;
+}
+.register-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2%;
+}
+.register-img-data {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    margin-top: 15%;
+    width: 65%;
+}
+.register-banner-image {
+    height: inherit;
+    width: 82%;
+}
+.register-image-label {
+    margin-top: 20px;
+}
+.register-image-para {
+    border: 1px solid #14BC9A;
+    height: 5%;
+    width: 70%;
+    padding: 3px;
+    border-radius: 5px;
+
+}
+
+.register-image-para .register-image-learn {
+    text-align: center;
+    color: #14BC9A;
+    font-size: 600;
+
+}

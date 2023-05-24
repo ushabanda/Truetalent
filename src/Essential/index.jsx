@@ -91,6 +91,7 @@ function Essential() {
       <div>
         <LogoBox />
       </div>
+      
     </div>
   );
 }
