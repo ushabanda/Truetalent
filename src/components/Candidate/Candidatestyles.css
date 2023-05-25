@@ -1,0 +1,17 @@
+.candidate-form span{
+    color:black;
+}
+.candidate-account-button{
+    height:40px;
+    width:100px;
+}
+.employer-account-button{
+    height:40px;
+    width:100px;
+    margin-left: 80px;
+}
+.candidate-circle-icon{
+    margin-left:-97px;
+    font-size:0.5rem;
+    margin-top:5px;
+}

@@ -13,10 +13,10 @@
     width: 50%;
 }
 .register-form {
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: center;
-    margin-top: 2%;
+    justify-content: center; */
+    margin-top: 12%;
 }
 .register-img-data {
     display: grid;
@@ -47,4 +47,45 @@
     color: #14BC9A;
     font-size: 600;
 
+}
+.register-candidate-profile, 
+.register-employer-profile{
+    border:1px solid #dbdbdb;
+    height:190px;
+    width:180px;
+    border-radius:20px;
+    
+}
+.register-profile-content{
+    display:flex;
+}
+.register-profile-heading{
+    margin-top:10px;
+    
+}
+.register-employer-profile{
+    margin-left:18px;
+    text-align: center;
+    align: center;
+}
+.register-employer-profile p{
+    text-align: center;
+}
+.register-candidate-profile{
+    text-align:center;
+}
+.register-candidate-profile p{
+    text-align: center;
+}
+.register-form h3{
+    margin-left:15%;
+    color:#212529;
+    font-size: 1.275em;
+    font-weight: 600;
+    margin-bottom: 5%;
+}
+.register-link{
+    text-decoration: none;
+    border:none;
+    background-color: white;
 }

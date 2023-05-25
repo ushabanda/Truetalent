@@ -4,6 +4,7 @@ import Jobs from "./components/Jobs";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
+import Candidate from "./components/Candidate/Candidate";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/jobs/search" element={<Jobs />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/candidate" element={<Candidate />} />
         </Routes>
       </BrowserRouter>
     </div>
