@@ -1,0 +1,31 @@
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-left: 100px;
+    width: 1200px;
+}
+
+.image-box {
+    max-height: 60px;
+    max-width: 130px;
+    min-width: 120px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 3px 15px rgba(49, 65, 88, .12156862745098039);
+}
+
+.image-box:hover {
+    border: 1px solid #14BC9A;
+}
+
+.trust-content {
+    /* margin-left:100px; */
+    text-align: center;
+    margin-top: 80px;
+}
+
+span {
+    color: #14BC9A;
+}

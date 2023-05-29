@@ -7,9 +7,10 @@ import images from "../components/images/usha-image.jpg";
 import Tablecomponent from "../components/Tablecomponent/Tablecomponent";
 import LogoBox from "../components/LogoBox/LogoBox";
 import Navbar from "../components/Navbar/Navbar";
+import FormField from "../components/FormLabel/Formlabel";
 
 function Essential() {
-  const [jobs, setJobs] = useState(false);
+  const [jobs, setJobs] = useState(true);
   const [candidate, setCandidate] = useState(false);
   let navigate = useNavigate();
   let handleClickOne = () => {
@@ -39,23 +40,23 @@ function Essential() {
       </div>
       <div className="mainpage-searchbox">
         <button
-          className="jobs"
+          className="main-jobs"
           id="button"
           type="submit"
           onClick={handleClickOne}
           style={{
-            backgroundColor: jobs ? "#14BC9A" : "white",
+            backgroundColor: jobs ? "#14BC9A" : " #F7F7F7",
             color: jobs ? "white" : "black",
           }}
         >
           Search Jobs
         </button>
         <button
-          className="jobs"
+          className="main-candidates"
           type="submit"
           onClick={handleClickTwo}
           style={{
-            backgroundColor: candidate ? "#14BC9A" : "white",
+            backgroundColor: candidate ? "#14BC9A" : "#F7F7F7",
             color: candidate ? "white" : "black",
           }}
         >
@@ -91,7 +92,8 @@ function Essential() {
       <div>
         <LogoBox />
       </div>
-      
+      {/* <FormField label="firstname" />
+      <FormField label="lastname" /> */}
     </div>
   );
 }

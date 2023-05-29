@@ -23,21 +23,24 @@ h2 {
     margin-left: 300px;
 }
 
-.jobs {
-    padding: 15px;
+.main-jobs,
+.main-candidates {
+    padding: 10px;
     margin: 2px;
-    border: 1px solid grey;
-    background-color: white;
+    border: none;
+    background-color:grey;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
-
+.main-jobs{
+    width:140px;
+}
 .search-container {
     margin-left: 300px;
 }
 
 .candidates {
-    padding: 20px;
+    padding: 15px 40px;
     border: 1px solid rgb(235, 229, 229);
 }
 
@@ -48,9 +51,9 @@ h2 {
     width: 100px;
     border-radius: 8px;
     border: 1px solid #14BC9A;
-    margin-left: -115px;
-    height: 40px;
-    margin-top: 8px;
+    margin-left: -45px;
+    height: 45px;
+    margin-top: 0px;
     text-align: right;
 }
 
@@ -78,15 +81,12 @@ SearchIcon {
     border-radius: none;
 }
 
-/* .search-box1{
-    border:none;
+.search-box1 svg {
+    position: absolute;
+    margin-top: 12px;
+    margin-left: 15px;
 }
-.search-box2{
-    border: none;
-}
-.search-box1, search-box2:focus{
-    outline: none;
-} */
+
 .candidates {
     border: none;
 }
@@ -96,10 +96,11 @@ SearchIcon {
 }
 
 .search-icon2 {
-    position: relative;
-    top: 7px;
+    position: absolute;
+    top: 10px;
     color: white;
     right: 85px;
+    left:30px;
 }
 
 .photo-container {
@@ -109,7 +110,6 @@ SearchIcon {
     position: relative;
     left: 1140px;
     top: -120px;
-
 }
 
 .mainpage-searchbox {

@@ -15,7 +15,7 @@ import images12 from "../images/mystifly.png"
 import images13 from "../images/Tekwissen.jpg"
 import images14 from "../images/Recruiterspace.jpg"
 import images15 from "../images/Respnse-informatics.webp"
- import "./styles.css"
+ import "./logobox_styles.css"
 
 function LogoBox() {
   return (

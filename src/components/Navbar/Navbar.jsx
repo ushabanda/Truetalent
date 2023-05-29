@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Navbarstyles.css"
-import { Link } from 'react-router-dom'
+import images1 from "../images/truetalent-logo.svg"
 import { useNavigate } from "react-router-dom";
 
 function Navbar() {
@@ -14,15 +14,10 @@ function Navbar() {
   return (
     <div className='Navbar-container'>
       <div className='truetalent-logo'>
-        <span className='true'>true</span><span className='t-color'>T</span><span className='alent'>alent</span>
+        <img src={images1} alt="truetalent-logo.svg" />
       </div>
-      <div className='TT'>
-        <p>TTEssential</p>
-        <div className='TTGig'>
-        <p>TTGig</p>
-        </div>
-        </div>
-        <div>
+      
+      <div className='login-btn'>
           <button type="button" className='navbar-login' onClick={navigateLogin}>Login</button>
           <button type="button" className='navbar-register' onClick={navigateRegister}>Register</button>
         </div>

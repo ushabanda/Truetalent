@@ -29,12 +29,10 @@ function Register() {
                   className="register-banner-image"
                 />
                 <div className="register-image-label">
-                  <h3>
-                    <h4>
+                  <h4>
                       <span>Your Dream job</span>at best locations is just a
                       click away!
-                    </h4>
-                  </h3>
+                  </h4>
                   <div className="register-image-para">
                     <p className="register-image-learn">
                       Learn more about TrueTalent
@@ -54,11 +52,11 @@ function Register() {
                   style={{
                     height: "3em",
                     width: "3em",
-                    color: "#dbdbdb",
+                    color: "#928d8d",
                   }}
                 />
-                <p>I'm an employer</p>
-                <p>Iam here to look for job</p>
+                <p>I'm a candidate</p>
+                <p>Iam here to find my next job.</p>
                 </div>
                 </button>
                 <button className='register-link' onClick={navigateToEmployer}>
@@ -67,10 +65,10 @@ function Register() {
                   style={{
                     height: "3em",
                     width: "3em",
-                    color: "#dbdbdb",
+                    color: "#928d8d",
                   }}/>
-                  <p>I'm a candidate</p>
-                <p>Iam here to find my next job</p>
+                  <p>I'm an employer</p>
+                <p>Iam here to job seekers.</p>
                 </div>
                 </button>
               </div>

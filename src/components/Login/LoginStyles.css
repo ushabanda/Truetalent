@@ -18,21 +18,30 @@
     display: grid;
     align-items: center;
     justify-content: center;
-    height: fit-content;
-    margin-top: 15%;
-    width: 65%;
+    /* height: fit-content; */
+    margin: 82px 20%;
+    width: 80%;
 }
 
 .login-image-content,
 .login-form {
-    width: 50%;
+    width: 100%;
+}
+.login-image-content{
+    width:85%;
+    background-color: rgb(248, 247, 247);
+    margin-top:3px;
+}
+.login-form form {
+    width: 75%;
+    margin-bottom: 40px;
 }
 
 .login-form {
-    /* display: flex; */
+    display: flex;
     align-items: center;
-    justify-content: center;
-    margin-top: 2%;
+    justify-content:last baseline;
+    margin-left:25%;
 }
 
 .image-label {
@@ -45,59 +54,66 @@
     width: 70%;
     padding: 3px;
     border-radius: 5px;
-
 }
 
 .login-image-para .login-image-learn {
     text-align: center;
     color: #14BC9A;
-    font-size: 600;
-
+    margin-block: auto;
+    padding: 4px 10px;
 }
 
 .login-email-input,
 .login-password-input {
     padding: 17px 10px 17px 40px;
-    width: 45%;
+    width: 65%;
     background-color: #F7F7F7;
     border: 0px;
     border-radius: 5px;
     font-size: 500;
     font-weight: bold;
-
-
 }
 
 .login-password-input {
-    width: 48%;
+    width: 70%;
 }
-
+.login-checkbox{
+    border-radius:5px;
+    background-color: rgb(216, 212, 212);
+    height:15px;
+    width:15px;
+    border:1px solid grey;
+}
+.login-check-container{
+    display:flex;
+}
 .login-remember {
-    font-size: .875em;
+    font-size: .775em;
+    margin-left:5px;
 }
 
 .login-link-remember {
     font-size: .875em;
-    margin-left: 18%;
+    margin-left: 26%;
     text-decoration: none;
+    margin-top:0px;
 }
 
 .login-password-box {
-    /* padding:5px; */
     margin: 30px;
-    font-size: 500;
+    font-size: .775em;
     font-weight: bold;
     margin-left: -3px;
 }
 
 .login-sign-container {
     padding: 10px;
-    width: 50%;
+    width: 78%;
     margin: 5% 0 3% -2px;
     border: none;
     background-color: #14BC9A;
-    padding: 15px;
-    border-radius: 5px;
+    padding: 12px;
+    border-radius: 10px;
     color: white;
 }
 
@@ -109,9 +125,9 @@
     position: relative;
     /* top:2px; */
     display: block;
-    width: 46%;
+    width: 72%;
     left: -10px;
-    border-radius: 5px;
+    border-radius: 10px;
     text-align: center;
     font-size: 12px;
     font-weight: 500;
@@ -133,15 +149,33 @@
 
 .eye-closed-img {
     margin-left: -24px !important;
+    height:15px;
+    width:16px;
 }
 
 .eye-img {
     margin-left: -22px !important;
+    height:15px;
+    width:16px;
 }
-.login-google-image{
-    height:12px;
-    width:12px;
+
+.login-google-image {
+    height: 12px;
+    width: 12px;
     position: absolute;
     margin-top: 14px;
-    margin-left: 9px;
+    margin-left: 85px;
+}
+
+.login-header {
+    margin-left: 60px;
+    font-size: 1.3em;
+    font-weight: 600;
+}
+.login-email-image,
+.login-pass-image,
+.eye-img,
+eye-closed-img{
+    height: 15px;
+    width:16px;
 }
