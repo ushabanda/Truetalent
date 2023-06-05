@@ -6,6 +6,7 @@ import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
 import Candidate from "./components/Candidate/Candidate";
 
+
 function App() {
   return (
     <div className="main-root">

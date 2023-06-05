@@ -1,26 +1,12 @@
-h2 {
+.home-page-heading h2 {
     font-family: sans-serif;
     font-size: 40px;
     font-weight: 600;
     text-align: center;
-
 }
 
 .text {
-
     color: #14BC9A;
-}
-
-/* p {
-    text-align: center;
-    color: grey;
-    margin-top: -20px;
-    font-size: 18px;
-
-} */
-
-#button {
-    margin-left: 300px;
 }
 
 .main-jobs,
@@ -28,20 +14,24 @@ h2 {
     padding: 10px;
     margin: 2px;
     border: none;
-    background-color:grey;
+    background-color: grey;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
-.main-jobs{
-    width:140px;
-}
-.search-container {
-    margin-left: 300px;
+
+.main-jobs {
+    width: 140px;
 }
 
 .candidates {
     padding: 15px 40px;
     border: 1px solid rgb(235, 229, 229);
+}
+
+.mainpage-searchbox {
+    font-size: 14px;
+    margin-top: 30px;
+    
 }
 
 .search {
@@ -54,11 +44,11 @@ h2 {
     margin-left: -45px;
     height: 45px;
     margin-top: 0px;
-    text-align: right;
 }
 
 #candidates-one {
-    width: 310px;
+    width: 34vw;
+    min-width: 200px;
     border-right: 1px solid grey;
 }
 
@@ -68,20 +58,21 @@ h2 {
 
 SearchIcon {
     margin: 0 10px;
-
 }
 
 .search-container {
     display: flex;
     background-color: white;
-    width: 800px;
-    /* border: 1px solid rgb(247, 239, 239); */
     border-radius: 10px;
     box-shadow: 0 0 3px 3px rgb(248, 248, 248);
-    border-radius: none;
+    width:-moz-fit-content;
+    width:fit-content;
+    justify-content: center;
+    
 }
 
-.search-box1 svg {
+.search-box1 svg,
+.search-box2 svg {
     position: absolute;
     margin-top: 12px;
     margin-left: 15px;
@@ -100,7 +91,7 @@ SearchIcon {
     top: 10px;
     color: white;
     right: 85px;
-    left:30px;
+    left: 30px;
 }
 
 .photo-container {
@@ -108,19 +99,15 @@ SearchIcon {
     width: 200px;
     border-radius: 50%;
     position: relative;
-    left: 1140px;
-    top: -120px;
-}
-
-.mainpage-searchbox {
-    margin-top: -300px;
+    left: 1150px;
+    top: -70px;
 }
 
 .photoplace {
     height: 300px;
 }
 
-.mainpara {
+.main-para {
     text-align: center;
     color: #9398A1;
     font-size: .975em;
@@ -129,4 +116,15 @@ SearchIcon {
 
 .main-root {
     height: inherit;
+}
+
+.home-page-heading {
+    margin-top: 30px;
+}
+
+.mainpage-search-container{
+    display: flex;
+    justify-content: center;
+    
+    
 }

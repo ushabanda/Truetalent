@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom'
 import images2 from "../images/eye_closed.png"
 import images3 from "../images/eye.png"
 import FormField from '../FormLabel/Formlabel'
+import TextField from '@mui/material/TextField';
 
 function Candidate() {
   const [passwordVisible, setPasswordVisible] = useState(false);
@@ -52,13 +53,13 @@ function Candidate() {
               <h3>Create Truetalent Account</h3>
               <span className='candidate-page-account'>Iam a
                 <button className='candidate-account-button'>Candidate</button>
-                <button className='employer-account-button'>Empoyer</button>
+                <button className='employer-account-button'>Employer</button>
               </span>
               <form>
                 <div className='candidate-name-container'>
-                <div className='candidate-fname-field'><FormField label="FirstName" className='candidate-firstname'/></div>
+                <TextField id="filled-basic" label="FirstName" variant="filled" className='candidate-fname-container'/>
                   <div>
-                  <FormField label="LastName" className='candidate-lname-field'/>
+                  <TextField id="filled-basic" label="LastName" variant="filled" className='candidate-lname-container'/>
                   </div>
                 {/* <input type="text" placeholder="FirstName" className='candidate-fname-field'/>
                 <input type="text" placeholder="LastName" className='candidate-lname-field'/> */}
