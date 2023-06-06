@@ -47,7 +47,7 @@ function Essential() {
 
       {/* <div className="photoplace">
         <img src={images} alt="usha-image.jpg" className="photo-container" />
-      </div> */}
+      </div>  */}
 <div className="mainpage-search-container">
       <div className="mainpage-searchbox">
         <div className="mainpage-search-btn">
@@ -109,7 +109,7 @@ function Essential() {
         <LogoBox />
       </div>
       <DomainBox />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

@@ -110,8 +110,7 @@ SearchIcon {
 .main-para {
     text-align: center;
     color: #9398A1;
-    font-size: .975em;
-    margin-top: -20px;
+    font-size: 0.875em;
 }
 
 .main-root {
@@ -125,6 +124,51 @@ SearchIcon {
 .mainpage-search-container{
     display: flex;
     justify-content: center;
+}
+
+.home-page-heading h2 {
+    margin-bottom: 0px !important;
+}
+
+.mainpage-searchbox,
+.search-box2{
+    width:70%;
+    min-width:200px;
+}
+
+/* This is mobile view */
+@media screen and (max-width:425px) {
+    .home-page-heading h2 {
+        font-size: 1em;
+    }
     
+    /* .mainpage-search-container
+    {
+        width:114px;
+        
+    } */
     
+}
+
+/* This is tablet view */
+@media screen and (min-width:425px) and (max-width:980px) {
+    .home-page-heading h2 {
+        font-size: 1.5em;
+    }
+    /* .mainpage-search-container
+    {
+        width:768px;
+        
+    } */
+}
+
+/* This is desktop view */
+@media screen and (min-width:981px) {
+    .home-page-heading h2 {
+        font-size: 2.5em;
+        margin-bottom: 5px !important;
+    }
+    .main-para {
+        font-size: 1em;
+    }
 }

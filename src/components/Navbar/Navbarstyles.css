@@ -14,11 +14,12 @@
     box-shadow: 0px 1px 5px #919191;
     height: 45px;
     display: flex;
+    width:100vw;
 }
 
 .truetalent-logo {
     margin-top: 9px;
-    margin-left: 100px;
+    margin-left: 6%;
     cursor: pointer;
 }
 
@@ -45,7 +46,7 @@
 }
 
 .login-btn {
-    right: 40px;
+    right: 4%;
     position: absolute;
 }
 
@@ -76,5 +77,4 @@
 .link-register {
     text-decoration: none;
     color: #FD815E;
-
 }

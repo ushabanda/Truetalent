@@ -1,19 +1,30 @@
 footer {
     background-color: #0b264c;
     color: white;
-    height: 130px;
+    height: 80px;
+    /* max-width:100%;
+    min-width: 100%; */
     position: relative;
+    top:20px;
     bottom: 0px;
+    width:100vw;
+    overflow-x:hidden;
+    overflow-y: hidden;
+    display:flexbox;
+    flex-wrap: wrap;
 }
 
 .div_footer {
-    padding: 0 20em;
-    width: 100%;
+    padding: 0 50px;
+    /* max-width: 100%;
+    min-width: 100%; */
     margin: auto;
-    padding: 50px 0;
+    padding: 80px 0;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid white;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(136, 133, 133);
+    flex-wrap: wrap;
 
 }
 
@@ -33,14 +44,23 @@ footer {
 .col-12 {
     flex: 0 0 auto;
     width: 100%;
+    position:relative;
+    left:100px;
+    padding:3px;
 }
 
 .nav {
     display: flex;
+    /* justify-content:center; */
     flex-wrap: wrap;
     padding-left: 0;
     margin-bottom: 0;
     list-style: none;
+}
+
+.nav-link{
+color:rgb(189, 185, 185);
+font-size: .875em;
 }
 
 .footer_btm {
@@ -64,6 +84,8 @@ footer {
     font-size: .875em;
     --bs-text-opacity: 1;
     color: #6c757d !important;
+    position: relative;
+    left:100px;
 }
 
 .icons {
@@ -83,4 +105,9 @@ footer {
     align-items: center;
     justify-content: center;
     margin: 0 10px;
+}
+
+.d-flex{
+    padding:5px;
+    height:50px;
 }
