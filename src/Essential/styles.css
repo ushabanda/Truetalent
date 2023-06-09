@@ -9,6 +9,10 @@
     color: #14BC9A;
 }
 
+.main-root {
+    overflow-x: hidden;
+}
+
 .main-jobs,
 .main-candidates {
     padding: 10px;
@@ -23,6 +27,7 @@
     width: 140px;
 }
 
+
 .candidates {
     padding: 15px 40px;
     border: 1px solid rgb(235, 229, 229);
@@ -31,7 +36,7 @@
 .mainpage-searchbox {
     font-size: 14px;
     margin-top: 30px;
-    
+
 }
 
 .search {
@@ -41,15 +46,19 @@
     width: 100px;
     border-radius: 8px;
     border: 1px solid #14BC9A;
-    margin-left: -45px;
+    /* margin-left: -45px; */
     height: 45px;
-    margin-top: 0px;
+    /* margin-top: 0px; */
+    position: relative;
+    bottom:33px;
+    left:5px;
 }
 
 #candidates-one {
     width: 34vw;
     min-width: 200px;
     border-right: 1px solid grey;
+    
 }
 
 #candidates-two {
@@ -65,17 +74,19 @@ SearchIcon {
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 0 3px 3px rgb(248, 248, 248);
-    width:-moz-fit-content;
-    width:fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
     justify-content: center;
-    
+    height:45px;
+
 }
 
 .search-box1 svg,
 .search-box2 svg {
-    position: absolute;
+    position: relative;
     margin-top: 12px;
     margin-left: 15px;
+
 }
 
 .candidates {
@@ -87,11 +98,21 @@ SearchIcon {
 }
 
 .search-icon2 {
-    position: absolute;
+    position: relative;
     top: 10px;
     color: white;
-    right: 85px;
-    left: 30px;
+    left: -10px;
+}
+
+.d-flex1 {
+    display: flex;
+    padding:0px;
+    height:45px;
+    
+}
+
+.d-flex2{
+    display:flex;
 }
 
 .photo-container {
@@ -118,10 +139,10 @@ SearchIcon {
 }
 
 .home-page-heading {
-    margin-top: 30px;
+    margin-top: 70px;
 }
 
-.mainpage-search-container{
+.mainpage-search-container {
     display: flex;
     justify-content: center;
 }
@@ -131,9 +152,13 @@ SearchIcon {
 }
 
 .mainpage-searchbox,
-.search-box2{
-    width:70%;
-    min-width:200px;
+.search-box2 {
+    width: 75%;
+    min-width: 200px;
+}
+
+LocationOnIcon {
+    position: static;
 }
 
 /* This is mobile view */
@@ -141,13 +166,6 @@ SearchIcon {
     .home-page-heading h2 {
         font-size: 1em;
     }
-    
-    /* .mainpage-search-container
-    {
-        width:114px;
-        
-    } */
-    
 }
 
 /* This is tablet view */
@@ -155,11 +173,6 @@ SearchIcon {
     .home-page-heading h2 {
         font-size: 1.5em;
     }
-    /* .mainpage-search-container
-    {
-        width:768px;
-        
-    } */
 }
 
 /* This is desktop view */
@@ -168,6 +181,7 @@ SearchIcon {
         font-size: 2.5em;
         margin-bottom: 5px !important;
     }
+
     .main-para {
         font-size: 1em;
     }

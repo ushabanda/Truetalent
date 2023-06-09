@@ -11,6 +11,8 @@ function Navbar() {
   let navigateRegister = () => {
     navigate("/register");
   };
+
+  
   return (
     <div className='Navbar-container'>
       <div className='truetalent-logo'>

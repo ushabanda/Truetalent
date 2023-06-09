@@ -15,6 +15,8 @@
     height: 45px;
     display: flex;
     width:100vw;
+    background-color: white;
+    position: absolute;
 }
 
 .truetalent-logo {

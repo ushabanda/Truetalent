@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
-import "./job-card-styles.css";
+// import "./job-card-styles.css";
 import Rangeslider from "../Rangeslider";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import Calendar from "../calendar/calender";
 import CardList from "../cards/CardList";
 import { Box } from "@mui/system";
-import ViewListIcon from '@mui/icons-material/ViewList';
-import ViewDayIcon from '@mui/icons-material/ViewDay';
+import ViewListIcon from "@mui/icons-material/ViewList";
+import ViewDayIcon from "@mui/icons-material/ViewDay";
 import Tablecomponent from "../Tablecomponent/Tablecomponent";
 
 function Jobs() {
@@ -49,7 +49,11 @@ function Jobs() {
         <div className="filter-container">
           <div className="container_one">
             <h4 className="filter-text">Filter Search</h4>
-            <button type="button" onClick={handleclick} className="clear-button">
+            <button
+              type="button"
+              onClick={handleclick}
+              className="clear-button"
+            >
               Clear All
             </button>
           </div>
@@ -71,9 +75,10 @@ function Jobs() {
                   name="mumbai"
                   checked={formData.mumbai}
                   onChange={handleChange}
-                  
                 />
-                <label htmlFor="mumbai" className="city-name">Mumbai, Maharashtra</label>
+                <label htmlFor="mumbai" className="city-name">
+                  Mumbai, Maharashtra
+                </label>
               </div>
               <div className="cityname-container">
                 <input
@@ -397,7 +402,9 @@ function Jobs() {
                   checked={formData.const}
                   onChange={handleChange}
                 />
-                <label className="city-name">Engineering and Construction</label>
+                <label className="city-name">
+                  Engineering and Construction
+                </label>
               </div>
               <div className="cityname-container">
                 <input
@@ -489,23 +496,21 @@ function Jobs() {
           <div className="sort-content">
             <p className="sortparagraph">Sort by:</p>
             <div className="select-content">
-            <select className="select">
-              <option>Newest First</option>
-              <option>Oldest First</option>
-              <option>Most Relevent</option>
-            </select>
-            <div className="icon-content">
-            {/* <ViewListIcon /> */}
-            <div>
-            <Tablecomponent />
-            </div>
-            </div>
+              <select className="select">
+                <option>Newest First</option>
+                <option>Oldest First</option>
+                <option>Most Relevent</option>
+              </select>
+              <div className="icon-content">
+                {/* <ViewListIcon /> */}
+                <div>
+                  <Tablecomponent />
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div >
-          {/* <CardList /> */}
-        </div>
+        <div>{/* <CardList /> */}</div>
       </div>
     </div>
   );

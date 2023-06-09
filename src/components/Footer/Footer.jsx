@@ -41,7 +41,7 @@ function Footer() {
             </p>
           </div>
           <div className="col-6 ml-auto div_f_c">
-            <p className="text-muted">Stay Connected</p>
+            <p className="text-muted1">Stay Connected</p>
             <ul className="icons">
               <li>
                 <a

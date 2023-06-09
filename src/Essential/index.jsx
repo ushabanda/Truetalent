@@ -48,66 +48,65 @@ function Essential() {
       {/* <div className="photoplace">
         <img src={images} alt="usha-image.jpg" className="photo-container" />
       </div>  */}
-<div className="mainpage-search-container">
-      <div className="mainpage-searchbox">
-        <div className="mainpage-search-btn">
-          <button
-            className="main-jobs"
-            id="button"
-            type="submit"
-            onClick={handleClickOne}
-            style={{
-              backgroundColor: jobs ? "#14BC9A" : " #F7F7F7",
-              color: jobs ? "white" : "black",
-            }}
-          >
-            Search Jobs
-          </button>
-          <button
-            className="main-candidates"
-            type="submit"
-            onClick={handleClickTwo}
-            style={{
-              backgroundColor: candidate ? "#14BC9A" : "#F7F7F7",
-              color: candidate ? "white" : "black",
-            }}
-          >
-            Search Candidates
-          </button>
-        </div>
-
-        <div className="search-container">
-          <div className="search-box1">
-            <SearchIcon className="search-icon" />
-            <input
-              type="search"
-              placeholder="Skill/job roles"
-              className="candidates"
-              id="candidates-one"
-            />
-          </div>
-          <div className="search-box2">
-            <LocationOnIcon className="search-icon" />
-            <input
-              type="search"
-              placeholder="City"
-              className="candidates"
-              id="candidates-two"
-            />
-          </div>
-          <div>
-            <SearchIcon className="search-icon2" />
-            <button className="search" onClick={navigateJobs}>
-              Search
+      
+      <div className="mainpage-search-container">
+        <div className="mainpage-searchbox">
+          <div className="mainpage-search-btn">
+            <button
+              className="main-jobs"
+              id="button"
+              type="submit"
+              onClick={handleClickOne}
+              style={{
+                backgroundColor: jobs ? "#14BC9A" : " #F7F7F7",
+                color: jobs ? "white" : "black",
+              }}
+            >
+              Search Jobs
+            </button>
+            <button
+              className="main-candidates"
+              type="submit"
+              onClick={handleClickTwo}
+              style={{
+                backgroundColor: candidate ? "#14BC9A" : "#F7F7F7",
+                color: candidate ? "white" : "black",
+              }}
+            >
+              Search Candidates
             </button>
           </div>
+
+          <div className="search-container">
+            <div className="search-box1 d-flex1">
+              <SearchIcon className="search-icon" />
+              <input
+                type="search"
+                placeholder="Skill/job roles"
+                className="candidates"
+                id="candidates-one"
+              />
+            </div>
+            <div className="search-box2 d-flex2">
+              <LocationOnIcon className="search-icon" />
+              <input
+                type="search"
+                placeholder="City"
+                className="candidates"
+                id="candidates-two"
+              />
+            </div>
+            <div className="d-flex">
+              <SearchIcon className="search-icon2" />
+              <button className="search" onClick={navigateJobs}>
+                Search
+              </button>
+            </div>
+          </div>
         </div>
       </div>
-      </div>
 
-      <div className="logo-box">
-        <LogoBox />
-      </div>
+      <div className="logo-box"><LogoBox /></div>
       <DomainBox />
       <Footer />
     </div>
