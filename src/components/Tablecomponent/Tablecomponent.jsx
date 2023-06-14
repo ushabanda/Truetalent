@@ -21,8 +21,12 @@ function Tablecomponent() {
 
   return (
     <>
+    <div className='jobsearch-view'>
       <ViewListIcon onClick={handleFirstButtonClick} className="listicon" />
+      <div className='gridview'>
       <ViewDayIcon onClick={handleSecondButtonClick} className="gridicon" />
+      </div>
+      </div>
 
       {/* {showBoxes && (
         <div>

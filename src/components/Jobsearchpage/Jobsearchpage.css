@@ -1,38 +1,353 @@
-.search-field{
-    position:relative;
-    top:100px;
+.search-field {
+    position: absolute;
+    top: 100px;
     display: flex;
-    border: 2px solid rgb(224, 218, 218);
-    height: 54px;
-    width: 1000px;
-    margin-left: 200px;
-    border-radius: 10px;
+    height: 50px;
+    width: 70%;
 }
 
-.btn {
-    margin-left: 378px;
-    height: 50px;
+.skill-search,
+.city-search {
+    width: 50%;
+    display: flex;
+}
+
+.skill-search,
+.city-search {
+    height: 46px;
+    position: relative;
+    border: none;
+    margin-left: 15%;
+    border: 2px solid rgb(224, 218, 218);
+}
+
+.skill-search {
+    border-right: none;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.skill-input,
+.city-input {
+    border: none;
+    position:relative;
+    left:20px;
+    width: 400px;
+}
+
+.skill-input:focus,
+.city-input:focus {
+    outline: none;
+}
+
+.city-search {
+    margin: 0;
+}
+
+.find-job-btn {
+    height: 46px;
     width: 165px;
+    cursor: pointer;
     background-color: #14BC9A;
     border: 2px solid #14BC9A;
     border-top-right-radius: 7px;
     border-bottom-right-radius: 7px;
     border-right: none;
     color: ghostwhite;
-    padding:5px;
+    padding: 5px;
+    position: absolute;
 }
 
-.submit{
-    height:50px;
+.submit {
+    height: 50px;
 }
 
-.searchbar{
-    width:800px;
+.searchbar {
+    /* width: 800px; */
     border-right: 1px solid black;
 }
 
-.icon{
-    position:relative;
-    top:8px;
-    left:10px;
+.jobsearch-icon {
+    position: relative;
+    top: 12px;
+    left: 10px;
+}
+
+.jobsearch-city {
+    width: 500px;
+}
+
+.search-field img {
+    height: 1.15em;
+}
+
+.filter-container {
+    height:275vh;
+    width: 300px;
+    border: 1px solid grey;
+    /* margin-top: 120px; */
+    /* margin-left: -845px; */
+    background-color: #f4f4f8;
+    border: none;
+    position:absolute;
+    top:35%;
+    left:10%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+
+.container_one {
+    display: flex;
+    height: 50px;
+    border: 1px solid grey;
+    background-color: #EAEAF0;
+    border: none;
+    justify-content: space-around;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+a {
+    margin-left: 15px;
+    margin-top: 22px;
+    color: #14BC9A;
+}
+
+.location-text{
+    margin-top: 5px;
+    font-size: 13px;
+    font-weight: 500;
+    font-family: sans-serif;
+    color: black
+}
+
+.city {
+    padding: 12px;
+    border: 1px solid rgb(187, 182, 182);
+    border-radius: 10px;
+}
+
+.progress {
+    display: inline-block;
+}
+
+.years {
+    display: flex;
+}
+
+.yearTwenty {
+    margin-left: 65px;
+}
+
+.toggle {
+    display: none;
+}
+
+.toggle-two {
+    display: none;
+}
+
+.toggle-one {
+    position: relative;
+    display: block;
+    height: 20px;
+    width: 45px;
+    background-color: rgb(184, 176, 176);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 300ms linear;
+}
+
+.toggle-thr {
+    position: relative;
+    display: block;
+    height: 20px;
+    width: 45px;
+    background-color: rgb(184, 176, 176);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 300ms linear;
+}
+
+.toggle-one:before {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translatey(-50%);
+    content: "";
+    display: block;
+    height: 16px;
+    width: 16px;
+    background-color: white;
+    border-radius: 50%;
+    transition: left 300ms linear;
+}
+
+.toggle-thr:before {
+    position: absolute;
+    top: 50%;
+    left: 3px;
+    transform: translatey(-50%);
+    content: "";
+    display: block;
+    height: 16px;
+    width: 16px;
+    background-color: white;
+    border-radius: 50%;
+    transition: left 300ms linear;
+}
+
+.toggle:checked+.toggle-one {
+    background-color: #14BC9A;
+}
+
+.toggle-two:checked+.toggle-thr {
+    background-color: #14BC9A;
+}
+
+.toggle:checked+.toggle-one:before {
+    left: 27px;
+}
+
+.toggle-two:checked+.toggle-thr:before {
+    left: 27px;
+}
+
+.toggle-container {
+    display: flex;
+    align-items: center;
+}
+
+.travel {
+    margin-left: 20px;
+}
+
+.switch-container {
+    margin-left: 80px;
+}
+
+.toggle-containerTwo {
+    display: flex;
+    align-items: center;
+}
+
+.switch-containerOne {
+    margin-left: 10px;
+}
+
+.calender {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(167, 163, 163);
+    width: 170px;
+}
+
+.date {
+    margin: 10px;
+}
+
+.month {
+    margin-left: 10px;
+}
+
+
+.clear-button{
+    border:none;
+    background-color: #EAEAF0;
+    color:#14BC9A;
+    font-weight: bold;
+    margin-top:14px;
+}
+.clear-button:outline{
+    border:none;
+    
+}
+.location-text{
+    font-size: .780em;
+    font-weight:600em; 
+     margin-bottom:1.125em;
+     margin-top:1.5em;
+     margin-left: 30px;
+}
+.city{
+    font-weight: 600;
+    font-size: 12px;
+}
+.city-name{
+    font-size: .900rem;
+    color:grey;
+    font-weight: 600;
+    padding:5px;
+    margin:5px;
+}
+.cityname-container{
+    padding:4px;
+}
+.number-text{
+    color:#14BC9A;
+    font-weight: 600;
+}
+.search-result{
+    display: flex;
+    /* height:100px; */
+    position: absolute;
+    left:30%;
+    top:20%;
+}
+.search-content{
+    width:150px;
+    /* margin-left:60px;
+    margin-top:100px; */
+    position: absolute;
+    top:100px;
+    left:100px;
+}
+.sort-content{
+    /* margin-left:450px; */
+    display: flex;
+    position: absolute;
+    left:600px;
+    /* width:600px; */
+}
+.select-content{
+    display: flex;
+}
+.sortparagraph{
+    width:70px; 
+     margin-top:100px;
+    /* position: absolute;
+    top:100px;
+    right:10px; */
+    
+}
+.select{
+    width:100px;
+    height:30px;
+    margin-top:92px;
+    border:none;
+    margin-left:5px;
+}
+.select:outline{
+    border:none;
+}
+
+@media screen and (max-width:600px) {
+    .skill-search {
+        width: inherit !important;
+    }
+
+    .search-field,
+    .card-contents{
+        left: inherit !important;
+    }
+}
+
+@media screen and (max-width:980px) {
+    .city-search,
+    .filter-container {
+        display: none;
+    }
+
+    
 }

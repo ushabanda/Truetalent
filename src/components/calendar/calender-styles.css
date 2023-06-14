@@ -2,7 +2,7 @@
     display: flex;
     border:1px solid rgb(202, 196, 196);
     padding:5px;
-    width:200px;
+    width:230px;
     margin-left:20px;
     background-color: white;
     border-radius: 10px;
@@ -11,6 +11,7 @@
 .fromda, .toda{
     border:none;
     margin-left: 5px;
+    
 }
 .fromda:focus, .toda:focus{
     outline:none;

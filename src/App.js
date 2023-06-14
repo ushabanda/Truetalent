@@ -15,7 +15,7 @@ function App() {
         {/* <Essential /> */}
         <Routes>
           <Route index path="/" element={<Essential />} />
-          <Route path="/jobs/search" element={<Jobsearchpage />} />
+          <Route path="/jobs/search" element={<Jobsearchpage/>} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/candidate" element={<Candidate />} />

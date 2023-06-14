@@ -16,8 +16,8 @@ const FormField = ({ label }) => {
 
   return (
     <div className={`form-field ${isFocused ? 'focused' : ''}`}>
-      <label>{label}</label>
-      <input type="text" onFocus={handleFocus} onBlur={handleBlur} />
+      <label for="teppur" className='teppur'>{label}</label>
+      <input type="text" name='teppur' onFocus={handleFocus} onBlur={handleBlur} className='formlabel-input'/>
     </div>
   );
 };

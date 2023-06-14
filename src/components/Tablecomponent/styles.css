@@ -1,9 +1,18 @@
 .gridicon {
-    margin-left: 50px;
-    margin-bottom: 80px;
-    position: relative;
-    top: 80px;
-    left: -10px;
+    
+    /* display: flex; */
+    
+    
+    
+}
+
+.jobsearch-view{
+    display:flex;
+}
+
+.gridview{
+    margin-top: 100px;
+    margin-left:15px;
 }
 
 .listicon {
