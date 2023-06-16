@@ -1,6 +1,7 @@
 import React from "react";
 import "./footer.css"
 import "bootstrap-icons/font/bootstrap-icons.css";
+import {Link} from "react-router-dom";
 
 function Footer() {
   return (
@@ -9,7 +10,7 @@ function Footer() {
         <div className="col-12 ps-0 ">
           <ul className="nav">
             <li className="nav-item">
-              <a className="nav-link p-0 hand-hover">Home</a>
+              <Link to="/" className="nav-link p-0 hand-hover">Home</Link>
             </li>
             <li className="nav-item">
               <a className="nav-link p-0 hand-hover">About Us</a>
@@ -18,7 +19,7 @@ function Footer() {
               <a className="nav-link p-0 hand-hover">Contact Us</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link p-0 hand-hover">Giveaway</a>
+              <Link to="/giveaway" className="nav-link p-0 hand-hover">Giveaway</Link>
             </li>
             <li className="nav-item">
               <a target="_blank" className="nav-link p-0 hand-hover">

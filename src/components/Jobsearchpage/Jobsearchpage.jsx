@@ -6,11 +6,29 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import Rangeslider from "../Rangeslider";
 import Calendar from "../calendar/calender";
 import Tablecomponent from "../Tablecomponent/Tablecomponent";
+
+import ViewDayIcon from "@mui/icons-material/ViewDay";
+import CardList from "../cards/CardList";
+import ViewListIcon from "@mui/icons-material/ViewList";
+import Table from "../Tablecomponent/Table";
+
 import image from "../images/search-icon.svg";
 import image1 from "../images/map_pin.svg";
 
 function Jobsearchpage() {
   const [formData, setFormData] = useState({});
+  const [showBoxes, setShowBoxes] = useState(true);
+  const [displayText, setDisplayText] = useState(false);
+
+  const handleFirstButtonClick = () => {
+    setShowBoxes(true);
+    setDisplayText(false);
+  };
+
+  const handleSecondButtonClick = () => {
+    setShowBoxes(false);
+    setDisplayText(true);
+  };
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -23,28 +41,32 @@ function Jobsearchpage() {
   };
 
   return (
-    <div>
-      <div>
+    <div className="main-container">
+      <div className="Navbar-wrapper">
         <Navbar />
       </div>
-      <div className="search-field">
-        <div className="skill-search">
-          <img src={image} alt="search-icon.svg" className="jobsearch-icon" />
-          <input type="search" placeholder="Skills" className="skill-input" />
-        </div>
 
-        <div className="city-search">
-          <img src={image1} alt="map_pin.svg" className="jobsearch-icon" />
-          <input type="search" placeholder="City" className="city-input" />
-        </div>
+      <div className="search-bar-wrapper">
+        <div className="search-field">
+          <div className="skill-search">
+            <img src={image} alt="search-icon.svg" className="jobsearch-icon" />
+            <input type="search" placeholder="Skills" className="skill-input" />
+          </div>
 
-        <div className="submit">
-          <button type="submit" className="find-job-btn">
-            Find Jobs
-          </button>
+          <div className="city-search">
+            <img src={image1} alt="map_pin.svg" className="jobsearch-icon" />
+            <input type="search" placeholder="City" className="city-input" />
+          </div>
+
+          <div className="submit">
+            <button type="submit" className="find-job-btn">
+              Find Jobs
+            </button>
+          </div>
         </div>
-        </div>
-        <div className="main-container">
+      </div>
+
+      <div className="filter-wrapper">
         <div className="filter-container">
           <div className="container_one">
             <h4 className="filter-text">Filter Search</h4>
@@ -66,8 +88,8 @@ function Jobsearchpage() {
                   className="city"
                   name="city"
                 />
-                </div>
-                <div className="cityname-container">
+              </div>
+              <div className="cityname-container">
                 <input
                   type="checkbox"
                   name="mumbai"
@@ -486,31 +508,45 @@ function Jobsearchpage() {
                 <p>Jobs Posted Between</p>
                 <Calendar />
               </div>
-                </form>
-              </div>
+            </form>
           </div>
+        </div>
+      </div>
+
+      <div className="search-result">
+        <h3 className="search-content">Search Result</h3>
+
+        <div className="sort-content">
+          <p className="sortparagraph">Sort by:</p>
+
+          <div className="select-content">
+            <select className="select">
+              <option>Newest First</option>
+              <option>Oldest First</option>
+              <option>Most Relevent</option>
+            </select>
           </div>
-          <div className="search-result">
-          <h3 className="search-content">Search Result</h3>
-          <div className="sort-content">
-            <p className="sortparagraph">Sort by:</p>
-            <div className="select-content">
-              <select className="select">
-                <option>Newest First</option>
-                <option>Oldest First</option>
-                <option>Most Relevent</option>
-              </select>
-              <div className="icon-content">
-                {/* <ViewListIcon /> */}
-                <div>
-                  <Tablecomponent />
-                </div>
-              </div>
+
+          <div className="sort-view">
+            <ViewListIcon
+              onClick={handleFirstButtonClick}
+              className="listicon"
+            />
+            <div className="gridview">
+              <ViewDayIcon
+                onClick={handleSecondButtonClick}
+                className="gridicon"
+              />
             </div>
           </div>
         </div>
       </div>
-    
+
+      <div className="card-list">
+        {showBoxes && <CardList />}
+        {displayText && <Table />}
+      </div>
+    </div>
   );
 }
 

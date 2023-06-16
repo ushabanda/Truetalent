@@ -1,12 +1,12 @@
 .card-contents {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 50px;
-    /* width: 120%; */
-    max-width: 1000px;
-    min-width: 400px;
+    
+    width: 800px;
     position: absolute;
-    top:150px;
+    top:230px;
+    left:430px;
+    justify-content:end;
+    
+    
 }
 
 .job-card {

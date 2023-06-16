@@ -6,37 +6,10 @@ import "./styles.css"
 import Table from './Table';
 
 function Tablecomponent() {
-  const [showBoxes, setShowBoxes] = useState(true);
-  const [displayText, setDisplayText] = useState(false);
-
-  const handleFirstButtonClick = () => {
-    setShowBoxes(true);
-    setDisplayText(false);
-  };
-
-  const handleSecondButtonClick = () => {
-    setShowBoxes(false);
-    setDisplayText(true);
-  };
+  
 
   return (
     <>
-    <div className='jobsearch-view'>
-      <ViewListIcon onClick={handleFirstButtonClick} className="listicon" />
-      <div className='gridview'>
-      <ViewDayIcon onClick={handleSecondButtonClick} className="gridicon" />
-      </div>
-      </div>
-
-      {/* {showBoxes && (
-        <div>
-          <p>Box 1</p>
-          <p>Box 2</p>
-          <p>Box 3</p>
-        </div>
-      )} */}
-      {showBoxes && <div className="job-card-container"><CardList /></div>}
-      {displayText && <div className="table-container"><Table /></div>}
 
       {/* {displayText && <p>This is the text to be displayed.</p>} */}
     </>

@@ -1,18 +1,10 @@
-.gridicon {
-    
-    /* display: flex; */
-    
-    
-    
+.sort-view {
+    display: flex;
 }
 
-.jobsearch-view{
-    display:flex;
-}
-
-.gridview{
+.gridview {
     margin-top: 100px;
-    margin-left:15px;
+    margin-left: 15px;
 }
 
 .listicon {
@@ -26,18 +18,21 @@
     margin-top: 50px;
 }
 
-.job-card-container {
+ .job-card-container {
     padding: 10px;
     height: -webkit-fill-available;
     height: -moz-available;
     width: 800px;
-    margin-top: -70px;
-    margin-left: -760px;
-}
+    display: flex;
+    /* margin-top: 90px;
+    margin-left: 100px; */ 
+     position:absolute;
+    top:50px;
+ }
 
 .table {
-    margin-left: -750px;
-    margin-top: 50px;
+    margin-left: 500px;
+    margin-top: 220px;
     border-collapse: collapse;
     width: 850px;
 }
