@@ -6,6 +6,7 @@ import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
 import Candidate from "./components/Candidate/Candidate";
 import Jobsearchpage from "./components/Jobsearchpage/Jobsearchpage";
+import Giveaway from "./components/Footer/Giveaway/Giveaway";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/candidate" element={<Candidate />} />
+          <Route path="/giveaway" element={<Giveaway />}/>
         </Routes>
       </BrowserRouter>
     </div>

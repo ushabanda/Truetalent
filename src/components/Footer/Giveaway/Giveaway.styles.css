@@ -1,6 +1,44 @@
 .giveaway-container{
     width:80%;
-    margin: auto;
+    margin: auto auto;
+    flex: 1 1;
     padding: 0.75em 0;
     
+    
+}
+.giveaway-heading{
+    margin-top:50px;
+    font-size: 1.5em;
+}
+
+.giveaway-container h5{
+    font-size: 1.125em;
+    font-weight: 600;
+}
+
+.giveaway-container p{
+    font-size: 1em;
+    color:#263238;
+}
+
+.giveaway-link{
+    color:blue;
+}
+
+@media only screen and (max-width: 1600px) {
+    .giveaway-container {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .giveaway-container {
+        font-size: 11px !important;
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .giveaway-container {
+        font-size: 12px !important;
+    }
 }

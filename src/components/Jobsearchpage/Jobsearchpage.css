@@ -6,6 +6,10 @@
     width: 70%;
 }
 
+.responsive-div{
+    display:flex;
+    justify-content: center;
+}
 .skill-search,
 .city-search {
     width: 50%;

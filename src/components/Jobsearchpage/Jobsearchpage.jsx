@@ -66,6 +66,36 @@ function Jobsearchpage() {
         </div>
       </div>
 
+      <div className="search-result">
+        <h3 className="search-content">Search Result</h3>
+
+        <div className="sort-content">
+          <p className="sortparagraph">Sort by:</p>
+
+          <div className="select-content">
+            <select className="select">
+              <option>Newest First</option>
+              <option>Oldest First</option>
+              <option>Most Relevent</option>
+            </select>
+          </div>
+
+          <div className="sort-view">
+            <ViewListIcon
+              onClick={handleFirstButtonClick}
+              className="listicon"
+            />
+            <div className="gridview">
+              <ViewDayIcon
+                onClick={handleSecondButtonClick}
+                className="gridicon"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <div className="responsive-div">
       <div className="filter-wrapper">
         <div className="filter-container">
           <div className="container_one">
@@ -513,38 +543,10 @@ function Jobsearchpage() {
         </div>
       </div>
 
-      <div className="search-result">
-        <h3 className="search-content">Search Result</h3>
-
-        <div className="sort-content">
-          <p className="sortparagraph">Sort by:</p>
-
-          <div className="select-content">
-            <select className="select">
-              <option>Newest First</option>
-              <option>Oldest First</option>
-              <option>Most Relevent</option>
-            </select>
-          </div>
-
-          <div className="sort-view">
-            <ViewListIcon
-              onClick={handleFirstButtonClick}
-              className="listicon"
-            />
-            <div className="gridview">
-              <ViewDayIcon
-                onClick={handleSecondButtonClick}
-                className="gridicon"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-
       <div className="card-list">
         {showBoxes && <CardList />}
         {displayText && <Table />}
+      </div>
       </div>
     </div>
   );
