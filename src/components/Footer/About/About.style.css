@@ -1,0 +1,87 @@
+.about-heading {
+    padding:12% 5%;
+}
+
+.login-banner-image {
+    height: inherit;
+    width: 82%;
+    /* padding:10% 0; */
+    position: relative;
+    top:50px;
+}
+
+.about-top-part{
+    display:flex;
+    justify-content: space-between;
+    
+}
+
+.about-login{
+    background-color: #14BC9A;
+    margin:10px;
+    width:8rem;
+    padding:12px;
+    border-radius: 10px;
+    border:none;
+    color:white;
+    font-size: 1.125rem;
+}
+
+.about-vision-image{
+vertical-align: middle;
+position: relative;
+}
+
+.img_circle{
+    width: 9.375em;
+    height: 9.375em;
+    border-radius: 50%;
+    position: relative;
+    bottom:4em;
+    left:3em;
+}
+
+.card{
+    width: 40%;
+    box-shadow: 0 3px 15px -2px #919191;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 1.25rem;
+    text-align: center;
+}
+
+.card_sec{
+    display: flex;
+    width: 50%;
+    margin: auto;
+    justify-content: space-between;
+    padding: 1.75em 0;
+}
+
+.card_content h2{
+    font-size: 1rem;
+}
+
+.card p{
+    margin-top:2em;
+    font-size: .8rem;
+    text-align: center;
+}
+
+.post_sec{
+    padding:10%;
+}
+
+.post_sec h2{
+font-size: 1.2rem;
+}
+
+.post_sec p{
+    font-size: 1em;
+}
