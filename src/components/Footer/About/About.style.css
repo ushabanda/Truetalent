@@ -25,6 +25,7 @@
     border:none;
     color:white;
     font-size: 1.125rem;
+    cursor:pointer;
 }
 
 .about-vision-image{
@@ -43,17 +44,25 @@ position: relative;
 
 .card{
     width: 40%;
-    box-shadow: 0 3px 15px -2px #919191;
+    box-shadow: 0px 3px 15px -5px #919191;
     position: relative;
     display: flex;
     flex-direction: column;
-    min-width: 0;
+    min-width: 20%;
     word-wrap: break-word;
     background-color: #fff;
     background-clip: border-box;
     border: 1px solid rgba(0,0,0,.125);
     border-radius: 1.25rem;
     text-align: center;
+}
+
+.underline{
+    background: #6495ed;
+    width: 70px;
+    height: 5px;
+    border-radius: 40px;
+    margin-bottom: 15px;
 }
 
 .card_sec{
@@ -84,4 +93,16 @@ font-size: 1.2rem;
 
 .post_sec p{
     font-size: 1em;
+}
+
+.card_overlay{
+    background-color: #df6951;
+    height:6.5em;
+    width:6.25em;
+    position:absolute;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    z-index: -1;
+    left: -5%;
+    bottom: -5%;
 }

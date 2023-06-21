@@ -27,7 +27,7 @@ function Footer() {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link p-0 hand-hover">
+              <a  className="nav-link p-0 hand-hover">
                 Terms of Use &amp; Privacy Policy
               </a>
             </li>
