@@ -1,9 +1,18 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import "./Giveaway.styles.css"
 import Navbar from '../../Navbar/Navbar'
 import { Link } from 'react-router-dom'
 
 function Giveaway() {
+  const [tableData, setTableData] = useState([]);
+
+  useEffect(() => {
+    fetch('/api/table-data')  // Replace with the actual URL of your backend API
+      .then(response => response.json())
+      .then(data => setTableData(data))
+      .catch(error => console.error('Error:', error));
+  }, []);
+
   return (
     <div>
       <div className='giveaway-navbar'>
@@ -106,6 +115,31 @@ function Giveaway() {
           <p>In the event that any part of these terms and conditions is found to be unenforceable or invalid, the remaining provisions will still be binding.</p>
         </div>
       </div>
+      <div>
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>startdate</th>
+            <th>enddate</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Location</th>
+            <th>Registration</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          {tableData.map(row => (
+            <tr key={row.column1}>
+              <td>{row.column1}</td>
+              <td>{row.column2}</td>
+              
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
     </div>
   )
 }
