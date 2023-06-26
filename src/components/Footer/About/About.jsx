@@ -26,12 +26,12 @@ function About() {
             />
           </div>
         </div>
-        <div class="body">
-          <div class="card_sec">
-            <div class="card">
-              <div class="card_content">
+        <div className="body">
+          <div className="card_sec">
+            <div className="card">
+              <div className="card_content">
                 <h2>Our Vision</h2>
-                <div class="img_circle">
+                <div className="img_circle">
                 <img
               src={images1}
               alt="about_vision.svg"
@@ -42,13 +42,13 @@ function About() {
                   economical.
                 </p>
               </div>
-              <div class="card_overlay">
+              <div className="card_overlay">
               </div>
             </div>
-            <div class="card">
-              <div class="card_content">
+            <div className="card">
+              <div className="card_content">
                 <h2>Our Mission</h2>
-                <div class="img_circle">
+                <div className="img_circle">
                 <img
               src={images2}
               alt="about_mission.svg"
@@ -60,12 +60,12 @@ function About() {
                   best talent-to-employer match.
                 </p>
               </div>
-              <div class="card_overlay"></div>
+              <div className="card_overlay"></div>
             </div>
           </div>
-          <div class="post_sec">
-            <div class="post_full">
-              <div class="underline"></div>
+          <div className="post_sec">
+            <div className="post_full">
+              <div className="underline"></div>
               <h2>What we strive to do:</h2>
               <br />
               <p>

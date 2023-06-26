@@ -16,7 +16,7 @@ function Footer() {
               <Link to="/about" className="nav-link p-0 hand-hover">About Us</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link p-0 hand-hover">Contact Us</a>
+              <Link to="/contact" className="nav-link p-0 hand-hover">Contact Us</Link>
             </li>
             <li className="nav-item">
               <Link to="/giveaway" className="nav-link p-0 hand-hover">Giveaway</Link>

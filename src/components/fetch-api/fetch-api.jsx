@@ -1,33 +1,65 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState } from "react";
 
 const FetchApi = () => {
-  const [users, setUsers] = useState([])
+  const [extras, setextras] = useState([]);
+  const [Postdata, setPostdata] = useState([]);
+
+  const postData = () => {
+    const requestOptions = {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ title: "React POST Request Example" }),
+    };
+
+    fetch("https://reqres.in/api/posts", requestOptions)
+      .then((response) => response.json())
+      .then((data) => setPostdata(data));
+  };
 
   const fetchUserData = () => {
-    fetch("https://jsonplaceholder.typicode.com/users")
-      .then(response => {
-        return response.json()
+    fetch("//localhost:8001/get_data")
+      // .then(response => {
+      //   return response.json()
+      // })
+      // .then(data => {
+      //   console.log(data)
+      //   settoppings(data['topping'])
+      // })
+
+      .then((response) => {
+        return response.json();
       })
-      .then(data => {
-        setUsers(data)
-      })
-  }
+      .then((data) => {
+        console.log(data);
+        setextras(data["extra"]);
+      });
+  };
 
   useEffect(() => {
-    fetchUserData()
-  }, [])
+    fetchUserData();
+    postData();
+  }, []);
 
+  {
+    /* {toppings.length && (
+        <ul>
+          {toppings.map(topping => (
+            <li key={topping.id}>Topping Name : {topping.type}</li>
+          ))}
+        </ul>
+      )} */
+  }
   return (
     <div>
-      {users.length > 0 && (
+      {extras.length && (
         <ul>
-          {users.map(user => (
-            <li key={user.id}><pre>Name : {user.name}      &       Email : {user.email}</pre></li>
+          {extras.map((extra) => (
+            <li key={extra.id}>Extra Name : {extra.type}</li>
           ))}
         </ul>
       )}
     </div>
   );
-}
+};
 
 export default FetchApi;

@@ -7,7 +7,8 @@ import Register from "./components/Register/Register";
 import Candidate from "./components/Candidate/Candidate";
 import Jobsearchpage from "./components/Jobsearchpage/Jobsearchpage";
 import Giveaway from "./components/Footer/Giveaway/Giveaway";
-
+import About from "./components/Footer/About/About";
+import Contact from "./components/Footer/Contact/Contact";
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/candidate" element={<Candidate />} />
           <Route path="/giveaway" element={<Giveaway />}/>
+          <Route path="/about" element={<About />}/>
+          <Route path="/contact" element={<Contact />}/>
         </Routes>
       </BrowserRouter>
     </div>
