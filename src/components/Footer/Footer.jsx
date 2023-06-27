@@ -22,9 +22,9 @@ function Footer() {
               <Link to="/giveaway" className="nav-link p-0 hand-hover">Giveaway</Link>
             </li>
             <li className="nav-item">
-              <a target="_blank" className="nav-link p-0 hand-hover">
+              <Link to="/blog" className="nav-link p-0 hand-hover">
                 Blog
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
               <a  className="nav-link p-0 hand-hover">

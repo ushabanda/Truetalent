@@ -1,6 +1,27 @@
 from flask import Flask, jsonify
 from flask_cors import CORS
-# import mysql.connector
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="Google@123"
+)
+mycursor = mydb.cursor()
+
+# print(mydb)
+
+def mysql_get_all():
+    mycursor.execute("SELECT * FROM truetalentdb.winners")
+
+    myresult = mycursor.fetchall()
+    print("\n\n =======  mysql_get_all  ========\n\n")
+    for record in myresult:
+        print(record)
+    print("\n\n =================\n")
+
+    return myresult
+
 
 app = Flask(__name__)
 cors = CORS(app, resources={r"/*": {"origins": "*"}})
@@ -49,9 +70,9 @@ def namaste_world():
     return "<p>Namaste, World!</p>"
 
 
-@app.route("/get_data", methods=['GET'])
-# @cross_origin(origin='localhost',headers=['Content- Type','Authorization'])
-def get_data():
+# @app.route("/get_data", methods=['GET'])
+# # @cross_origin(origin='localhost',headers=['Content- Type','Authorization'])
+# def get_data():
     data = {
         "id": "0001",
         "type": "donut",
@@ -90,6 +111,11 @@ def get_data():
     }
     # return { "msg" : "Hi Usha" }
     return data
+
+@app.route("/get_sql_data", methods=['GET'])
+# @cross_origin(origin='localhost',headers=['Content- Type','Authorization'])
+def get_sql_data():
+    return jsonify(mysql_get_all())
 
 
 @app.route("/post_data", methods=['POST'])

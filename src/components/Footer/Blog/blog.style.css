@@ -1,0 +1,66 @@
+.marque-container button{
+    background-color: #14BC9A;
+    border:none;
+    outline:none;
+    padding:10px 15px;
+    color:white;
+    position:absolute;
+    top:3em;
+    left:5em;
+    z-index: 1;
+}
+
+.marque-content marquee{
+    position: absolute;
+    top:3em;
+    cursor: pointer;
+    
+}
+
+.marque-content img{
+    height:2.5em;
+    width:3.5em;
+    margin:0 1.3em;
+    
+    
+}
+
+.marque-content h4{
+    display: inline;
+    
+}
+
+.blog-image-container{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.image-box1{
+    flex:1 2 50%;
+    position:relative;
+}
+
+.blog-container section{
+    margin:10% 0 0 0;
+    background-color: #dbdbdb;
+    height:max-content;
+}
+
+.image-box1 img{
+    height:200px;
+    width:300px;
+    object-fit:cover;
+}
+
+.image-box1-content{
+    position:absolute;
+    top:35%;
+    padding: 15px 18px 13px;
+    /* background-image: linear-gradient(to top, #1a1919, transparent); */
+    width: calc(100% - 485px);
+        
+}
+
+
+
