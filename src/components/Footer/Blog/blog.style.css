@@ -37,8 +37,9 @@
 }
 
 .image-box1{
-    flex:1 2 50%;
+    /* flex:0 1 50%; */
     position:relative;
+    flex: 0 1 50% ;
 }
 
 .blog-container section{
@@ -62,5 +63,44 @@
         
 }
 
+.blog-middle-container{
+    display: flex;
+}
+.blog-querybox{
+margin: 2em 30% auto 5%;
+background-color: white;
+border-top: 1px solid #14BC9A;
+}
+
+.salary-query{
+    display: flex;
+}
+
+.blog-query-container{
+    margin:2em 10% auto -20%;
+}
+.salary-query figure{
+    flex: 0 1 35%;
+}
+.salary-query-content{
+    flex:0 1 65%;
+}
+
+.blog-category{
+    background-color: white;
+    width:300px;
+    height:100px;
+}
+
+.blog-n2{
+    height:50px;
+    width:50px;
+    border-radius: 50%;
+    background-color: #dbdbdb;
+}
+
+.blog-trend-news{
+    background-color: white;
+}
 
 
