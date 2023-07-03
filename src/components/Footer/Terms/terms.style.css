@@ -1,0 +1,8 @@
+.terms-container{
+    flex:1 1;
+    margin:10% auto;
+}
+
+.terms-body{
+    display: flex;
+}

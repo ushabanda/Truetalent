@@ -10,7 +10,7 @@ import Giveaway from "./components/Footer/Giveaway/Giveaway";
 import About from "./components/Footer/About/About";
 import Contact from "./components/Footer/Contact/Contact";
 import Blog from "./components/Footer/Blog/Blog";
-
+import Terms from "./components/Footer/Terms/Terms";
 function App() {
   return (
     <div className="main-root">
@@ -26,6 +26,7 @@ function App() {
           <Route path="/about" element={<About />}/>
           <Route path="/contact" element={<Contact />}/>
           <Route path="/blog" element={<Blog />}/>
+          <Route path="/term" element={<Terms />}/>
         </Routes>
       </BrowserRouter>
     </div>

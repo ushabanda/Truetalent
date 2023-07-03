@@ -27,9 +27,9 @@ function Footer() {
               </Link>
             </li>
             <li className="nav-item">
-              <a  className="nav-link p-0 hand-hover">
+              <Link to = "/term" className="nav-link p-0 hand-hover">
                 Terms of Use &amp; Privacy Policy
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

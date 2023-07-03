@@ -1,9 +1,10 @@
 import React from "react";
 import "./About.style.css";
-import FetchApi from "../../fetch-api/fetch-api";
+// import FetchApi from "../../fetch-api/fetch-api";
+import FetchData from "../../fetch-data/Fetch_data";
 import Footer from "../Footer";
 import Navbar from "../../Navbar/Navbar";
-
+import Country from "../../country/Country";
 import images from "../../images/login_banner.png";
 import images1 from "../../images/about_vision.svg"
 import images2 from "../../images/about_mission.svg"
@@ -117,7 +118,7 @@ function About() {
       <br></br>
       <h1>Fetch API Data</h1>
       <br></br>
-      <FetchApi />
+      <FetchData />
       <Footer />
     </div>
   );

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 const FetchApi = () => {
   const [extras, setextras] = useState([]);
-  const [dbdatas, setdbdatas] = useState();
+  const [data, setdata] = useState([]);
   const [Postdata, setPostdata] = useState([]);
 
 //   const postData = () => {
@@ -77,9 +77,9 @@ const FetchApi = () => {
 // };
 
 useEffect(() => {
-  fetch('http://localhost:8001/get_sql_data')  // Adjust the URL to match your Flask server
+  fetch('http://localhost:8001/data')  // Adjust the URL to match your Flask server
     .then(response => response.json())
-    .then(result => setdbdatas(result.dbdatas));
+    .then(result => setdata(data));
 }, []);
 
 // if (!dbdatas) {
@@ -95,10 +95,11 @@ useEffect(() => {
         </tr>
       </thead>
       <tbody>
-        {dbdatas.map(name => (
-          <tr key={name.id}>
-            <td>{name.data}</td>
-            <td>{name.type}</td>
+        {data.length>0 &&
+        data.map((a) => (
+          <tr key={a.id}>
+            <td>{a.name}</td>
+            <td>{a.startdate}</td>
             {/* Add more table cells based on your table structure */}
           </tr>
         ))}

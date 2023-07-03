@@ -81,3 +81,12 @@
     text-decoration: none;
     color: #FD815E;
 }
+
+.job-gig-container ul{
+    display:flex;
+    list-style-type:none;
+}
+
+.job-gig-container  Link{
+    text-decoration: none;
+}

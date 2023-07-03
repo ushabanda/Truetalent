@@ -1,3 +1,4 @@
+import json
 from flask import Flask, jsonify
 from flask_cors import CORS
 import mysql.connector
@@ -11,16 +12,42 @@ mycursor = mydb.cursor()
 
 # print(mydb)
 
+
 def mysql_get_all():
-    mycursor.execute("SELECT * FROM truetalentdb.winners")
+    mycursor.execute("SELECT * FROM truetalentdb.winners") 
 
     myresult = mycursor.fetchall()
+
+    # column_names = [i[0] for i in mycursor.description] # Get the column names
+
+    # dict_results = [dict(zip(column_names, row)) for row in myresult]  # Convert results to a dictionary
+
     print("\n\n =======  mysql_get_all  ========\n\n")
     for record in myresult:
         print(record)
     print("\n\n =================\n")
 
     return myresult
+
+
+def mysql_insert():
+    mycursor.execute(
+        " INSERT INTO truetalentdb.winners VALUES (9,'Weekly','2023-04-20','2023-04-27','Ravi Shankar Sharma','-','Bangalore','2023-04-20')")
+    mydb.commit()
+    return mycursor.rowcount
+
+
+def mysql_update():
+    mycursor.execute(
+        " UPDATE truetalentdb.winners SET Name = 'Darshan' WHERE ID = '2' ")
+    mydb.commit()
+    return mycursor.rowcount
+
+
+def mysql_delete():
+    mycursor.execute(" DELETE FROM truetalentdb.winners WHERE ID = '9' ")
+    mydb.commit()
+    return mycursor.rowcount
 
 
 app = Flask(__name__)
@@ -70,9 +97,9 @@ def namaste_world():
     return "<p>Namaste, World!</p>"
 
 
-# @app.route("/get_data", methods=['GET'])
+@app.route("/get_data", methods=['GET'])
 # # @cross_origin(origin='localhost',headers=['Content- Type','Authorization'])
-# def get_data():
+def get_data():
     data = {
         "id": "0001",
         "type": "donut",
@@ -112,7 +139,8 @@ def namaste_world():
     # return { "msg" : "Hi Usha" }
     return data
 
-@app.route("/get_sql_data", methods=['GET'])
+
+@app.route("/users", methods=['GET'])
 # @cross_origin(origin='localhost',headers=['Content- Type','Authorization'])
 def get_sql_data():
     return jsonify(mysql_get_all())
@@ -120,18 +148,29 @@ def get_sql_data():
 
 @app.route("/post_data", methods=['POST'])
 def post_function():
-    print("data added successfully")
-    return {"msg": "Data Added Successfully"}
+    if mysql_insert():
+        print("\n\n ===== Data added successfully  ======\n\n")
+        return {"msg": "Data Added Successfully"}
+    else:
+        return {"msg": "An error occured while inserting new record."}
 
 
 @app.route("/put_data", methods=['PUT'])
 def put_function():
-    return {"msg": "Data updated Successfully"}
+    if mysql_update():
+        print("\n\n ===== Data updated successfully  ======\n\n")
+        return {"msg": "Data updated Successfully"}
+    else:
+        return {"msg": "An error occured while updating  record."}
 
 
 @app.route("/delete_data", methods=['DELETE'])
 def delete_function():
-    return {"msg": "Data Deleted Successfully"}
+ if mysql_delete():
+        print("\n\n ===== Data deleted successfully  ======\n\n")
+        return {"msg": "Data deleted Successfully"}
+ else:
+        return {"msg": "An error occured while deleting  record."}
 
 
 if __name__ == '__main__':
