@@ -13,9 +13,14 @@ const FetchData = () => {
     <table>
       <thead>
         <tr>
-          <th>Name</th>
+          <th>ID</th>
+          <th>Category</th>
           <th>Start Date</th>
-          {/* Add more column headers based on your table structure */}
+          <th>End Date</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Location</th>
+          <th>Registration Date</th>
         </tr>
       </thead>
       <tbody>
@@ -23,11 +28,18 @@ const FetchData = () => {
           users.map(user => 
             
             <tr key={user.id}>
-              <td>{user.Name}</td>
-              <td>{user.startdate}</td>
-              {/* Add more table cells based on your table structure */}
+              <td>{user['id']}</td>
+              <td>{user['category']}</td>
+              <td>{user['start_date']}</td>
+              <td>{user['end_date']}</td>
+              <td>{user['name']}</td>
+              <td>{user['email']}</td>
+              <td>{user['location']}</td>
+              <td>{user['registration_date']}</td>
             </tr>
+            ,console.log(users)
         )}
+        
       </tbody>
     </table>
   );

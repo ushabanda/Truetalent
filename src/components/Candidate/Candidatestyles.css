@@ -1,8 +1,13 @@
 .candidate-form span{
     color:black;
 }
+
+.register-page-container{
+    display: flex;
+}
 .candidate-form{
-    margin-left:20%;
+    /* margin-left:20%; */
+    margin:10% auto auto 30%;
 }
 .candidate-account-button,
 .employer-account-button{

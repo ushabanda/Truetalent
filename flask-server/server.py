@@ -1,4 +1,4 @@
-import json
+import json, copy
 from flask import Flask, jsonify
 from flask_cors import CORS
 import mysql.connector
@@ -140,10 +140,28 @@ def get_data():
     return data
 
 
+def convert_list_dict(lst):
+   res_dict = {}
+   data = []
+   for i in range(len(lst)):
+       res_dict['id'] = lst[i][0]
+       res_dict['category'] = lst[i][1]
+       res_dict['start_date'] = lst[i][2].strftime("%d-%b-%Y")
+       res_dict['end_date'] = lst[i][3].strftime("%d-%b-%Y")
+       res_dict['name'] = lst[i][4] 
+       res_dict['email'] = lst[i][5]
+       res_dict['location'] = lst[i][6]
+       res_dict['registration_date'] = lst[i][7].strftime("%d-%b-%Y")
+
+       data.append(copy.deepcopy(res_dict))
+   return data
+
 @app.route("/users", methods=['GET'])
 # @cross_origin(origin='localhost',headers=['Content- Type','Authorization'])
 def get_sql_data():
-    return jsonify(mysql_get_all())
+    result = mysql_get_all()
+    output = convert_list_dict(result)
+    return jsonify(output)
 
 
 @app.route("/post_data", methods=['POST'])
