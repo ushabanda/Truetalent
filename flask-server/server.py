@@ -1,12 +1,14 @@
 import json, copy
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 from flask_cors import CORS
+from flask_cors import cross_origin
 import mysql.connector
 
 mydb = mysql.connector.connect(
   host="localhost",
   user="root",
-  password="Google@123"
+  password="Google@123",
+  database="truetalentdb"
 )
 mycursor = mydb.cursor()
 
@@ -29,13 +31,41 @@ def mysql_get_all():
 
     return myresult
 
+# def candidate_get():
+#     mycursor.execute('SELECT * FROM truetalentdb.candidate')
+#     getresult = mycursor.fetchall()
+#     print(candidate_get)
+    
+#     return getresult
 
-def mysql_insert():
+def mysql_insert(db, query_value):
     mycursor.execute(
-        " INSERT INTO truetalentdb.winners VALUES (9,'Weekly','2023-04-20','2023-04-27','Ravi Shankar Sharma','-','Bangalore','2023-04-20')")
+        f"INSERT INTO truetalentdb.{db} VALUES {query_value}")
+        # " INSERT INTO truetalentdb.winners VALUES (9,'Weekly','2023-04-20','2023-04-27','Ravi Shankar Sharma','-','Bangalore','2023-04-20')")
     mydb.commit()
     return mycursor.rowcount
 
+
+# mysql_insert()
+
+# def candidate_insert():
+#     mycursor.execute(
+#         'INSERT INTO truetalentdb.candidate VALUES (1,"Usha","banda","usha44hsm@gmail.com","usha@1234","usha@1234","123456")')
+#     mydb.commit()
+#     return mycursor.rowcount
+
+def submit_form():
+    # Extract form data from request
+   user_data = request.get_json()
+   name = user_data['fname']
+   email = user_data['email']
+
+   sql = "INSERT INTO forms (name, email) VALUES (%s, %s)"
+   values = (name, email)
+   mycursor.execute(sql, values)
+   mydb.commit()
+
+   return 'Form submitted successfully'
 
 def mysql_update():
     mycursor.execute(
@@ -165,15 +195,20 @@ def get_sql_data():
 
 
 @app.route("/post_data", methods=['POST'])
+@cross_origin()
 def post_function():
-    if mysql_insert():
-        print("\n\n ===== Data added successfully  ======\n\n")
-        return {"msg": "Data Added Successfully"}
-    else:
-        return {"msg": "An error occured while inserting new record."}
+    print("\n\n ======== request.data =======",request.get_json())
+    print("\n\n ======== request.form =======",request.form.get('language'))
+    # value_data = "(3,'Manu','B','manu.b@gmail.com','manu@1234','123456')"
+    # if mysql_insert('candidate', value_data):
+    #     print("\n\n ===== Data added successfully  ======\n\n")
+    return {"msg": "Data Added Successfully"}
+    # else:
+    #     return {"msg": "An error occured while inserting new record."}
 
 
 @app.route("/put_data", methods=['PUT'])
+@cross_origin()
 def put_function():
     if mysql_update():
         print("\n\n ===== Data updated successfully  ======\n\n")
@@ -183,6 +218,7 @@ def put_function():
 
 
 @app.route("/delete_data", methods=['DELETE'])
+@cross_origin()
 def delete_function():
  if mysql_delete():
         print("\n\n ===== Data deleted successfully  ======\n\n")
@@ -192,4 +228,4 @@ def delete_function():
 
 
 if __name__ == '__main__':
-    app.run(debug=True, host='localhost', port=8001)
+    app.run(debug=True, host='0.0.0.0', port=8001)

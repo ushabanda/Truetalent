@@ -21,29 +21,60 @@ function Candidate() {
   const [email, setEmail] = useState("");
   
 
+  const handleSubmit = async (event) => {
+    event.preventDefault();
   
 
-  const onSubmit = () => {
-    console.log("validation part");
+  const formdata = new FormData(event.target)
+
+  const user_data = {
+    name:formdata.get('name'),
+    lname:formdata.get('lname'),
+    email:formdata.get('email'),
+    password:formdata.get('password'),
+    cpasword:formdata.get('cpassword')
   };
 
-  const togglePasswordVisibility = () => {
-    setPasswordVisible(!passwordVisible);
-  };
+  try{
+      await fetch('http://localhost:8001/submit-form',{
+      method: 'POST',
+      headers: {
+        'Content-Type':'application/json'
+      },
+      body:JSON.stringify(user_data)
+    });
+    console.log('Form submitted successfully')
+  }
+  catch (error) {
+    console.error('Error submitting form:', error)
+  }
+}
 
-  const handlePasswordChange = (event) => {
-    setPassword(event.target.value);
-  };
 
-  const userSchema = yup.object().shape({
-    firstName: yup.string().required('Please enter your Firstname!'),
-    lastName: yup.string(),
-    email: yup.string().email().required('Please enter Email address!'),
-  });
 
-  const {register, handleSubmit, formState:{errors}} = useForm({
-    resolver:yupResolver(userSchema)
-  })
+
+
+  // const onSubmit = () => {
+  //   console.log("validation part");
+  // };
+
+  // const togglePasswordVisibility = () => {
+  //   setPasswordVisible(!passwordVisible);
+  // };
+
+  // const handlePasswordChange = (event) => {
+  //   setPassword(event.target.value);
+  // };
+
+  // const userSchema = yup.object().shape({
+  //   firstName: yup.string().required('Please enter your Firstname!'),
+  //   lastName: yup.string(),
+  //   email: yup.string().email().required('Please enter Email address!'),
+  // });
+
+  // const {register, handleSubmit, formState:{errors}} = useForm({
+  //   resolver:yupResolver(userSchema)
+  // })
 
   // async function validateForm() {
   //   let dataobject = {
@@ -96,24 +127,26 @@ function Candidate() {
                 <button className='candidate-account-button'>Candidate</button>
                 <button className='employer-account-button'>Employer</button>
               </span> */}
-              <form onSubmit={handleSubmit(onSubmit)}>
+              <form onSubmit={handleSubmit}>
                 <div className="candidate-name-container">
                   <TextField
                     id="filled-basic"
                     label="FirstName"
+                    name="fname"
                     variant="filled"
                     className="candidate-fname-container"
-                    {...register("firstName")}
+                    // {...register("firstName")}
                     onChange={(e) => setFirstName(e.target.value)}
                   />
-                  <p>{errors.firstName?.message}</p>
+                  {/* <p>{errors.firstName?.message}</p> */}
                   <div>
                     <TextField
                       id="filled-basic"
                       label="LastName"
+                      name="lname"
                       variant="filled"
                       className="candidate-lname-container"
-                      {...register("lasttName")}
+                      // {...register("lasttName")}
                       onChange={(e) => setLastName(e.target.value)}
                     />
                   </div>
@@ -124,8 +157,9 @@ function Candidate() {
                   <input
                     type="email"
                     placeholder="EmailAddress"
+                    name="email"
                     className="candidate-email-field"
-                    {...register("email")}
+                    // {...register("email")}
                     onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>
@@ -134,13 +168,14 @@ function Candidate() {
                     <input
                       type={passwordVisible ? "text" : "password"}
                       placeholder="Password"
+                      name="password"
                       className="candidate-password-input"
-                      {...register("password")}
-                      onChange={handlePasswordChange}
+                      // {...register("password")}
+                      // onChange={handlePasswordChange}
                     />
                     <span
                       className="eye-icon"
-                      onClick={togglePasswordVisibility}
+                      // onClick={togglePasswordVisibility}
                     >
                       {passwordVisible ? (
                         <img
@@ -160,8 +195,9 @@ function Candidate() {
                   <input
                     type="password"
                     placeholder="ConfirmPassword"
+                    name="cpassword"
                     className="candidate-cpass-field"
-                    {...register('confirmpassword')}
+                    // {...register('confirmpassword')}
 
                   />
                 </div>
