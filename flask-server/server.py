@@ -57,10 +57,10 @@ def mysql_insert(db, query_value):
 def submit_form():
     # Extract form data from request
    user_data = request.get_json()
-   name = user_data['fname']
+   name = user_data['name']
    email = user_data['email']
 
-   sql = "INSERT INTO forms (name, email) VALUES (%s, %s)"
+   sql = "INSERT INTO truetalentdb.candidate (name, email) VALUES (%s, %s)"
    values = (name, email)
    mycursor.execute(sql, values)
    mydb.commit()
@@ -75,13 +75,13 @@ def mysql_update():
 
 
 def mysql_delete():
-    mycursor.execute(" DELETE FROM truetalentdb.winners WHERE ID = '9' ")
+    mycursor.execute(" DELETE FROM truetalentdb.candidate WHERE ID = '1' ")
     mydb.commit()
     return mycursor.rowcount
 
 
 app = Flask(__name__)
-cors = CORS(app, resources={r"/*": {"origins": "*"}})
+cors = CORS(app, resources={r"/*": {"origins": "*"}}, supports_credentials=True)
 
 # @app.route('/get-data', methods=['GET'])
 # def get_table_data():
@@ -226,6 +226,15 @@ def delete_function():
  else:
         return {"msg": "An error occured while deleting  record."}
 
+@app.route("/submit-form", methods=['POST'])
+@cross_origin(supports_credentials=True)
+def submit_form_route():
+    result = submit_form()
+    response= jsonify({"msg":result})
+    response.headers.add("Access-Control-Allow-Origin", "http://localhost:3000")
+    response.headers.add("Access-Control-Allow-Credentials", "true")
+    return jsonify({"msg": result})
+
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=8001)
+    app.run(debug=True, host='localhost', port=8001)

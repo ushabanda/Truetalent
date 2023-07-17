@@ -25,15 +25,23 @@ function Candidate() {
     event.preventDefault();
   
 
-  const formdata = new FormData(event.target)
+  // const formdata = new FormData(event.target)
+
+  // const user_data = {
+  //   name:formdata.get('name'),
+  //   lname:formdata.get('lname'),
+  //   email:formdata.get('email'),
+  //   password:formdata.get('password'),
+  //   cpasword:formdata.get('cpassword')
+  // };
 
   const user_data = {
-    name:formdata.get('name'),
-    lname:formdata.get('lname'),
-    email:formdata.get('email'),
-    password:formdata.get('password'),
-    cpasword:formdata.get('cpassword')
-  };
+    name:firstName,
+    lname:lastName,
+    email:email,
+    password:password,
+    cpassword:password
+  }
 
   try{
       await fetch('http://localhost:8001/submit-form',{
@@ -58,13 +66,13 @@ function Candidate() {
   //   console.log("validation part");
   // };
 
-  // const togglePasswordVisibility = () => {
-  //   setPasswordVisible(!passwordVisible);
-  // };
+   const togglePasswordVisibility = () => {
+    setPasswordVisible(!passwordVisible);
+   }
 
-  // const handlePasswordChange = (event) => {
-  //   setPassword(event.target.value);
-  // };
+  const handlePasswordChange = (event) => {
+    setPassword(event.target.value);
+  };
 
   // const userSchema = yup.object().shape({
   //   firstName: yup.string().required('Please enter your Firstname!'),
@@ -171,11 +179,11 @@ function Candidate() {
                       name="password"
                       className="candidate-password-input"
                       // {...register("password")}
-                      // onChange={handlePasswordChange}
+                       onChange={handlePasswordChange}
                     />
                     <span
                       className="eye-icon"
-                      // onClick={togglePasswordVisibility}
+                       onClick={togglePasswordVisibility}
                     >
                       {passwordVisible ? (
                         <img

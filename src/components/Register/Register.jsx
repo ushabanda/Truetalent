@@ -28,52 +28,56 @@ function Register() {
                   alt="login_banner.png"
                   className="register-banner-image"
                 />
-                <div className="register-image-label">
-                  <h4>
-                      <span>Your Dream job</span>at best locations is just a
-                      click away!
-                  </h4>
-                  <div className="register-image-para">
-                    <p className="register-image-learn">
-                      Learn more about TrueTalent
-                    </p>
-                  </div>
-                </div>
+                <h2 className="register-heading1">
+                  Experience Hiring 2.0 with <span>TrueTalent </span>
+                </h2>
+                <button className="register-image-learn" type="button">
+                  Learn more about TrueTalent
+                </button>
               </div>
             </div>
 
-            <div className='register-form'>
-              <h3>Select Your Profile</h3>
+            <div className="register-form">
+              <div className="register-right">
+                <div className="register-profile">
+              <h2 className="profile-heading">Select Your Profile</h2>
               <div className="register-profile-content">
-                <button className='register-link' onClick={navigateToCandidate}>
-              <div className="register-candidate-profile">
-                <PermIdentityIcon
-                  className="register-candidate-icon"
-                  style={{
-                    height: "3em",
-                    width: "3em",
-                    color: "#928d8d",
-                  }}
-                />
-                <p>I'm a candidate</p>
-                <p>Iam here to find my next job.</p>
-                </div>
+                <div className="profile-card">
+                <button className="register-link" onClick={navigateToCandidate}>
+                  <div className="register-candidate-profile">
+                    <PermIdentityIcon
+                      className="register-candidate-icon"
+                      style={{
+                        height: "3em",
+                        width: "3em",
+                        color: "#928d8d",
+                      }}
+                    />
+                    <p>I'm a candidate</p>
+                    <p>Iam here to find my next job.</p>
+                  </div>
                 </button>
-                <button className='register-link' onClick={navigateToEmployer}>
-                <div className="register-employer-profile">
-                  <BusinessCenterIcon 
-                  style={{
-                    height: "3em",
-                    width: "3em",
-                    color: "#928d8d",
-                  }}/>
-                  <p>I'm an employer</p>
-                <p>Iam here to job seekers.</p>
                 </div>
+                <div className="profile-card">
+                <button className="register-link" onClick={navigateToEmployer}>
+                  <div className="register-employer-profile">
+                    <BusinessCenterIcon
+                      style={{
+                        height: "3em",
+                        width: "3em",
+                        color: "#928d8d",
+                      }}
+                    />
+                    <p>I'm an employer</p>
+                    <p>Iam here to job seekers.</p>
+                  </div>
                 </button>
+                </div>
+              </div>
+              </div>
               </div>
             </div>
-          </div>
+        </div>
         </div>
       </div>
     </div>
